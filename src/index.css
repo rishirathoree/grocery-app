@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.text-xsm{
+    font-size: 12px;
+}
+
+body{font-family: 'Poppins', sans-serif}
+
+*{
+    padding: 0;margin: 0;box-sizing: border-box;;
+}
