@@ -75,7 +75,7 @@ const Switch = () => {
               <p
                 key={index}
                 onClick={() => { activeSwitch(item) }}
-                className={`cursor-pointer font-semibold py-2 px-6 duration-200 text-xsm ${activeCurrentSwitch === item ? 'bg-gray-500/50 text-white inline-block' : 'bg-none'}`}
+                className={`cursor-pointer font-semibold py-2 px-6 duration-200 text-xsm ${activeCurrentSwitch === item ? 'bg-green-500/50 text-white inline-block' : 'bg-none'}`}
               >
                 {item}
               </p>
@@ -86,7 +86,7 @@ const Switch = () => {
         </div>
         <div className='overflow-x-auto overflow-hidden ring-1 ring-black/5 rounded-md'>
       <table className='w-full '>
-            <thead className='bg-gray-50'>
+            <thead className='bg-green-50'>
               <tr className=''>
                 {tableHead.map((item, index) => {
                   return (
@@ -97,7 +97,7 @@ const Switch = () => {
             </thead>
             <tbody>
               {filterDataBasedOnTable.map((item, index) => (
-                <tr key={index} className='odd:bg-white even:bg-gray-50'>
+                <tr key={index} className='odd:bg-white even:bg-green-50'>
                   <td className='font-lighter text-left p-2 text-xsm'>{item.orderID}</td>
       <td className='font-lighter text-left p-2 text-xsm'>{item.customerName}</td>
       <td className='font-lighter text-left p-2 text-xsm'>{item.totalAmount}</td>

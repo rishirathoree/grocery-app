@@ -93,7 +93,7 @@
               <input
               type='text'
               onChange={(e)=>{setSearchInputValue(e.target.value)}}
-              className='focus:outline-none outline-none font-lighter text-xsm p-1 duration-500  '
+              className='focus:outline-none outline-none font-lighter text-xsm p-1  duration-500  '
               placeholder='Search'
             />
             </div>
@@ -106,7 +106,7 @@
               <div className={`absolute top-12 duration-100 ring-1 ring-black/5 shadow-lg right-0 z-50 bg-white ${showDropdown ? 'visible translate-x-0' : ' invisible translate-x-2'}`}>
                 {filterMenuDropdown.map((item,i)=>{
                   return(
-                    <li onClick={()=>{setactiveDropdownSortFilter(item)}} className='list-none font-light text-xsm px-3 py-2 hover:bg-gray-100' key={i}>{item}</li>
+                    <li onClick={()=>{setactiveDropdownSortFilter(item)}} className='list-none font-light text-xsm px-3 py-2 hover:bg-green-100' key={i}>{item}</li>
                   )
                 })}
               </div>
@@ -135,7 +135,7 @@
 
         {filteredTableBasedOnDropdownValueSelectedWithInput.map((item)=>{
           return(
-        <tr key={item.orderID} className='text-left even:bg-slate-500/5 rounded-sm'>
+        <tr key={item.orderID} className='text-left even:bg-green-500/5 rounded-sm'>
         <td className='font-lighter text-left p-2 text-xsm'>{item.orderID}</td>
         <td className='font-lighter text-left p-2 text-xsm'>{item.customerName}</td>
         <td className='font-lighter text-left p-2 text-xsm'>{item.address}</td>

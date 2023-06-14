@@ -66,6 +66,9 @@ const Products = () => {
                   Sub Category
                 </th>
                 <th scope="col" className="px-6 py-3">
+                  Variant
+                </th>
+                <th scope="col" className="px-6 py-3">
                   Sort
                 </th>
                 <th scope="col" className="px-6 py-3">
@@ -110,6 +113,9 @@ const Products = () => {
                     <td className="px-6 py-4 cursor-pointer hover:underline">Amul Butter</td>
                     <td className="px-6 py-4">Frutis And Vegatbales</td>
                     <td className="px-6 py-4">Exotic Vegetables</td>
+                    <td className="flex items-center justify-center">
+                      <span className="rounded-full w-8 h-8 flex items-center justify-center text-center bg-gray-100">1</span>
+                    </td>
                     <td className="px-6 py-4">Active</td>
                     <td className="flex items-center px-6 py-8 space-x-3 text-center">
                       <div className="flex gap-4 items-center ">
