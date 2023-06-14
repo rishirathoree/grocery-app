@@ -22,7 +22,7 @@ const Category = () => {
                 type="text"
                 className="font-semibold focus:outline-none outline-none lg:w-80 md:w-full sm:w-full text-xsm bg-gray-100 p-2"
               />
-              <button className="px-6 py-2 bg-blue-500 text-white font-semibold">
+              <button className="px-6 py-2 bg-green-500 text-white font-semibold">
                 Reset
               </button>
             </div>
@@ -60,7 +60,7 @@ const Category = () => {
               <tr>
                 <th scope="col" className="p-4">
                   <div className="flex items-center">
-                    <i className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"></i>
+                    <i className="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 rounded focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"></i>
                     <label htmlFor="checkbox-all-search" className="sr-only">
                       checkbox
                     </label>
@@ -84,7 +84,7 @@ const Category = () => {
                         <input
                           id="checkbox-table-search-1"
                           type="checkbox"
-                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                          className="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 rounded focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                         />
                         <label
                           htmlFor="checkbox-table-search-1"

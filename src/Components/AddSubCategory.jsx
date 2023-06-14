@@ -14,7 +14,7 @@ const AddSubCategory = () => {
               onClick={() => {
                 setAddNewUser(!addNewUser);
               }}
-              className="px-3 py-2 bg-blue-500 text-white font-semibold"
+              className="px-3 py-2 bg-green-500 text-white font-semibold"
             >
               Add New Sub Category
             </button>
@@ -33,7 +33,7 @@ const AddSubCategory = () => {
                 } flex w-[500px] items-start justify-center flex-col bg-white p-8 duration-500 gap-8`}
               >
                 <p className="font-semibold text-xsm ">Create New Sub Category</p>
-                <input type="text" placeholder="Enter Product Name" className="p-2 bg-gray-50 w-full ring-1 outline-none focus:outline-none ring-black/50 rounded-sm focus:ring-blue-500 duration-500 focus:ring-2"/>
+                <input type="text" placeholder="Enter Product Name" className="p-2 bg-gray-50 w-full ring-1 outline-none focus:outline-none ring-black/50 rounded-sm focus:ring-green-500 duration-500 focus:ring-2"/>
                 <div className="flex items-center justify-center w-full">
                   <label
                     htmlFor="dropzone-file"

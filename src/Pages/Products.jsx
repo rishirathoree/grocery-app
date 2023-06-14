@@ -15,20 +15,20 @@ const Products = () => {
           {/* catgeory sroting option containing search/slect dropdown category and subcategory */}
           <div className="flex lg:items-center md:items-start gap-4 lg:flex-row md:flex-col sm:flex-col">
           <input type="text" className="focus:outline-none outline-none p-2 bg-gray-50 ring-1 ring-black/20 rounded-md" />
-          <div className=" flex flex-wrap items-center gap-4">
-          <select>
+          <div className=" flex lg:flex-row md:flex-col sm:flex-col lg:items-center md:items-start sm:items-start gap-4">
+          <select className="px-6 py-2 ring-1 ring-black/50 focus:outline-none outline-none">
             <option>Select Customers</option>
           </select>
-          <select>
+          <select className="px-6 py-2 ring-1 ring-black/50 focus:outline-none outline-none">
             <option>Select Customers</option>
           </select>
-          <select>
+          <select className="px-6 py-2 ring-1 ring-black/50 focus:outline-none outline-none">
             <option>Select Customers</option>
           </select>
           </div>
           <div className="flex lg:flex-row md:flex-row sm:flex-flex-row gap-3">
-          <button className="px-6 py-2 bg-blue-500 text-white">Go</button>
-          <button className="px-6 py-2 bg-blue-500 text-white">Reset</button>
+          <button className="px-6 py-2 bg-green-500 text-white">Go</button>
+          <button className="px-6 py-2 bg-green-500 text-white">Reset</button>
           </div>
           </div>
           {/* catgeory sroting option containing search/slect dropdown category and subcategory end here */}
@@ -47,7 +47,7 @@ const Products = () => {
               <tr>
                 <th scope="col" className="p-4">
                   <div className="flex items-center">
-                    <i className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"></i>
+                    <i className="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 rounded focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"></i>
                     <label htmlFor="checkbox-all-search" className="sr-only">
                       checkbox
                     </label>
@@ -88,7 +88,7 @@ const Products = () => {
                         <input
                           id="checkbox-table-search-1"
                           type="checkbox"
-                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                          className="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 rounded focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                         />
                         <label
                           htmlFor="checkbox-table-search-1"
