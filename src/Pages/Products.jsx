@@ -13,23 +13,24 @@ const Products = () => {
     <>
       <div className="p-4 space-y-6">
           {/* catgeory sroting option containing search/slect dropdown category and subcategory */}
-          <div className="flex lg:items-center md:items-start gap-4 lg:flex-row md:flex-col sm:flex-col">
-          <input type="text" className="focus:outline-none outline-none p-2 bg-gray-50 ring-1 ring-black/20 rounded-md" />
-          <div className=" flex lg:flex-row md:flex-col sm:flex-col lg:items-center md:items-start sm:items-start gap-4">
-          <select className="px-6 py-2 ring-1 ring-black/50 focus:outline-none outline-none">
+          <div className="space-y-4">
+            <input type="text" className="w-full text-lg p-2 bg-gray-100 focus:outline-none outline-none" />
+            <div className="flex items-center flex-wrap gap-2">
+            <select className="px-6 text-xsm py-2 ring-1 ring-black/50 focus:outline-none outline-none">
             <option>Select Customers</option>
           </select>
-          <select className="px-6 py-2 ring-1 ring-black/50 focus:outline-none outline-none">
+          <select className="px-6 text-xsm py-2 ring-1 ring-black/50 focus:outline-none outline-none">
             <option>Select Customers</option>
           </select>
-          <select className="px-6 py-2 ring-1 ring-black/50 focus:outline-none outline-none">
+          <select className="px-6 text-xsm py-2 ring-1 ring-black/50 focus:outline-none outline-none">
             <option>Select Customers</option>
           </select>
-          </div>
-          <div className="flex lg:flex-row md:flex-row sm:flex-flex-row gap-3">
-          <button className="px-6 py-2 bg-green-500 text-white">Go</button>
+            </div>
+            <div className="space-x-2">
+            <button className="px-6 py-2 bg-green-500 text-white">Go</button>
           <button className="px-6 py-2 bg-green-500 text-white">Reset</button>
-          </div>
+            </div>
+          
           </div>
           {/* catgeory sroting option containing search/slect dropdown category and subcategory end here */}
 
