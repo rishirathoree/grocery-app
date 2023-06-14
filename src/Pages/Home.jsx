@@ -6,15 +6,16 @@ import OrderStatus from './OrderStatus'
 import RefundOrder from './RefundOrder'
 import Category from './Category'
 import Products from './Products'
-
 import SubCategory from './SubCategory'
 import AddProducts from './AddProducts'
+import Breadcrumbs from '../Components/Breadcrumbs'
 
 const Home = () => {
     return (
         <>
         <div className='w-full h-screen overflow-hidden overflow-y-auto'>
             <Navbar />
+            <Breadcrumbs />
             <Routes>
                 <Route path="/" element={<Dashboard />} />
                 <Route path="/OrderStatus" element={<OrderStatus />} />
