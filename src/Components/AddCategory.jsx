@@ -21,7 +21,7 @@ const AddCategory = () => {
             <div
               onClick={removeModal}
               ref={overlayModal}
-              className={`absolute overlay w-full z-50 h-screen top-0 right-0 bg-black bg-opacity-50 flex duration-500 items-center justify-center ${
+              className={`absolute overlay w-full z-50 h-screen top-0 right-0 bg-black bg-opacity-10 flex duration-500 items-center justify-center ${
                 addNewUser ? " visible opacity-100" : " invisible opacity-0"
               }`}
             >

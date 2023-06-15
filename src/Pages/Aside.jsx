@@ -86,8 +86,11 @@ const Aside = () => {
 
   return (
     <aside className="h-full">
-      <div className="asideBar group lg:w-[250px] overflow-y-auto md:w-[250px] sm:w-[150px] lg:block md:block sm:hidden duration-300 bg-white h-full">
-      <i className="bx mb-4 p-4 bx-lg text-green-500 bxs-square-rounded"></i>
+      <div className="asideBar group  lg:w-[250px] overflow-y-auto md:w-[250px] sm:w-[150px] lg:block md:block sm:hidden duration-300 bg-white h-full">
+      <div className="flex mb-4 p-4  items-center justify-between">
+      <i className={`bx bx-lg text-green-500 bxs-square-rounded `}></i>
+      <i onClick={()=>{document.body.classList.remove('sidebar-collapse')}} className="bx lg:hidden md:hidden sm:block  bx-objects-horizontal-right"></i>
+      </div>
       <div className="space-y-2 flex items-start justify-center flex-col">
         
       {sidebarCategories.map((category, index) => (

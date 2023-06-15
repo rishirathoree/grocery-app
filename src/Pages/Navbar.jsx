@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 const Navbar = () => {
   const [showAccountDropdown, setShowAccountDropdown] = useState(false);
   const inputRef = useRef(null);
+  const accountPop = useRef(null)
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.ctrlKey && e.key === 'k') {
@@ -18,6 +19,20 @@ const Navbar = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const invisiblePopOverAccount = (e) => {
+      if (accountPop.current &&  showAccountDropdown && e.key === 'Escape') {
+        setShowAccountDropdown(false)
+      }
+    };
+
+    document.addEventListener('keydown', invisiblePopOverAccount);
+
+    return () => {
+      document.removeEventListener('keydown', invisiblePopOverAccount);
+    };
+  }, []);
+
   return (
     <>
       <div className='w-full bg-white flex items-center justify-between p-4'>
@@ -26,9 +41,8 @@ const Navbar = () => {
             onClick={() => {
               document.body.classList.toggle('sidebar-collapse');
             }}
-            className='bx bx-objects-horizontal-left'
-          ></i>
-          <div className='flex lg:flex md:flex sm:hidden ring-1 ring-black/5 p-2 rounded-md shadow-lg px-4 py-1 items-center space-x-3'>
+            className='bx lg:opacity-0 duration-500 md:opacity-0 sm:opacity-100 bx-objects-horizontal-left'></i>
+          {/* <div className='flex lg:flex md:flex sm:hidden ring-1 ring-black/5 p-2 rounded-md shadow-lg px-4 py-1 items-center space-x-3'>
             <i className='bx bx-search-alt'></i>
             <input
             ref={inputRef}
@@ -40,7 +54,7 @@ const Navbar = () => {
             <p className='font-light uppercase inline-block text-[12px] px-2 py-1 ring-1 ring-black/5'>Ctrl</p>
             <p className='font-light uppercase inline-block text-[12px] px-2 py-1 ring-1 ring-black/5'>K</p>
           </div>
-          </div>
+          </div> */}
         </div>
 
         <div className='space-x-4 flex items-center'>
@@ -56,7 +70,7 @@ const Navbar = () => {
                 className='bx bx-chevron-down'
               ></i>
               {showAccountDropdown && (
-                <div className='account-dropdown-when-click ring-1 ring-black/5 z-[500] rounded-lg select-none absolute py-2 top-10 right-0 bg-white'>
+                <div ref={accountPop} className='account-dropdown-when-click ring-1 ring-black/5 z-[500] rounded-lg select-none absolute py-2 top-10 right-0 bg-white'>
                   <ul>
                     <li className='px-6 py-2 flex items-center gap-3 hover:bg-slate-100'>
                       <i className='bx bx-user'></i> Account

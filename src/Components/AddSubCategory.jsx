@@ -21,7 +21,7 @@ const AddSubCategory = () => {
             <div
               onClick={removeModal}
               ref={overlayModal}
-              className={`absolute overlay w-full z-50 h-screen top-0 right-0 bg-black bg-opacity-50 flex duration-500 items-center justify-center ${
+              className={`absolute overlay w-full z-50 h-screen top-0 right-0 bg-black bg-opacity-10 flex duration-500 items-center justify-center ${
                 addNewUser ? " visible opacity-100" : " invisible opacity-0"
               }`}
             >
@@ -30,7 +30,7 @@ const AddSubCategory = () => {
               <div
                 className={` ${
                   addNewUser ? "translate-y-0" : " translate-y-10"
-                } flex w-[500px] items-start justify-center flex-col bg-white p-8 duration-500 gap-8`}
+                } flex w-[500px] items-start justify-center flex-col shadow-xl bg-white p-8 duration-500 gap-8`}
               >
                 <p className="font-semibold text-xsm ">Create New Sub Category</p>
                 <input type="text" placeholder="Enter Product Name" className="p-2 bg-gray-50 w-full ring-1 outline-none focus:outline-none ring-black/50 rounded-sm focus:ring-green-500 duration-500 focus:ring-2"/>
