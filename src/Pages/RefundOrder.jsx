@@ -173,7 +173,7 @@ const RefundOrder = () => {
                     <input value={dateFrom} onChange={(e)=>setDateFrom(e.target.value)} type="date" className='ring-1 ring-black/5 shadow-lg text-xsm uppercase p-2 rounded-lg' />
                     <input value={dateUpto} onChange={(e)=>setDateUpto(e.target.value)} type="date" className='ring-1 ring-black/5 shadow-lg text-xsm uppercase p-2 rounded-lg' />
                     {/* <button onClick={handleSubmitDateFormat} className='font-semibold text-sm px-6 py-2 bg-green-500 rounded-lg text-white'>Go</button> */}
-                    <button onClick={resetButtonDateFormat} className='font-semibold text-sm px-6 py-2 bg-green-500 rounded-lg text-white'>RESET</button>
+                    <button onClick={resetButtonDateFormat} className='bg-green-500 p-2 rounded hover:shadow-lg font-semibold duration-500 text-xsm text-white px-6 py-2'>RESET</button>
                 </div>
             </div>
             

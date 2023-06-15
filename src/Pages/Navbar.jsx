@@ -21,7 +21,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const invisiblePopOverAccount = (e) => {
-      if (accountPop.current &&  showAccountDropdown && e.key === 'Escape') {
+      if (accountPop.current && showAccountDropdown && e.key === 'Escape') {
         setShowAccountDropdown(false)
       }
     };
@@ -35,14 +35,14 @@ const Navbar = () => {
 
   return (
     <>
-      <div className='w-full bg-white flex items-center justify-between p-4'>
+      <div className='w-full shadow-b-lg bg-white flex items-center justify-between p-4'>
         <div className='space-x-4 flex items-center'>
           <i
             onClick={() => {
-              document.body.classList.toggle('sidebar-collapse');
+              document.body.classList.add('sidebar-collapse');
             }}
-            className='bx lg:opacity-0 duration-500 md:opacity-0 sm:opacity-100 bx-objects-horizontal-left'></i>
-          {/* <div className='flex lg:flex md:flex sm:hidden ring-1 ring-black/5 p-2 rounded-md shadow-lg px-4 py-1 items-center space-x-3'>
+            className='bx lg:invisible duration-500 md:invisible sm:visible bx-objects-horizontal-left'></i>
+          <div className='flex lg:flex md:flex sm:hidden ring-1 ring-black/5 p-2 rounded-md shadow-lg px-4 py-1 items-center space-x-3'>
             <i className='bx bx-search-alt'></i>
             <input
             ref={inputRef}
@@ -54,7 +54,7 @@ const Navbar = () => {
             <p className='font-light uppercase inline-block text-[12px] px-2 py-1 ring-1 ring-black/5'>Ctrl</p>
             <p className='font-light uppercase inline-block text-[12px] px-2 py-1 ring-1 ring-black/5'>K</p>
           </div>
-          </div> */}
+          </div>
         </div>
 
         <div className='space-x-4 flex items-center'>

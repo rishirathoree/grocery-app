@@ -85,7 +85,7 @@ const Aside = () => {
   };
 
   return (
-    <aside className="h-full">
+    <aside className="h-full shadow-xl border-r border-slate-500/9 z-50">
       <div className="asideBar group  lg:w-[250px] overflow-y-auto md:w-[250px] sm:w-[150px] lg:block md:block sm:hidden duration-300 bg-white h-full">
       <div className="flex mb-4 p-4  items-center justify-between">
       <i className={`bx bx-lg text-green-500 bxs-square-rounded `}></i>
@@ -163,18 +163,18 @@ const Aside = () => {
       >
         {category.subcategories.map((subcategory, subIndex) => (
           <Link key={subIndex} to={subcategory.url}>
-            <div className="pl-8 flex gap-2 items-center p-2">
+            <div className={`pl-8 flex gap-2 shadow-xl items-center p-3 ${routeActive.includes(subcategory.url) ? "bg-green-500": "bg-white"}`}>
               <i
                 className={`${subcategory.icon} ${
                   routeActive.includes(subcategory.url)
-                    ? "font-bold text-green-500"
+                    ? "font-bold text-white"
                     : "font-light"
-                } hover:text-slate-500`}
+                } `}
               ></i>
               <p
-                className={`font-lighter hover:text-slate-500 ${
+                className={`font-lighter  ${
                   routeActive.includes(subcategory.url)
-                    ? "font-bold text-green-500"
+                    ? "font-bold text-white"
                     : "font-light"
                 } subcategory-title text-xsm`}
               >

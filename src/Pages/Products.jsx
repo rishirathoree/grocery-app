@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import fruitImg from "../assets/frt.jpg";
+import { Link } from "react-router-dom";
 
 const Products = () => {
   const [searchCategoryValue, setSearchCategoryValue] = useState('');
@@ -170,6 +171,7 @@ const Products = () => {
     <>
       <div className="p-4 space-y-6">
         {/* category sorting option containing search/select dropdown category and subcategory */}
+        <Link to="/products/addproducts"><button className="bg-green-500 p-2 rounded hover:shadow-lg font-semibold duration-500 text-xsm text-white"> <i className="bx bx-cart-alt"></i> Add Product</button></Link>
         <div className="space-y-4">
           <input onChange={(e)=>{setSearchCategoryValue(e.target.value)}} type="text" className="w-full text-lg p-2 bg-gray-100 focus:outline-none outline-none" />
           <div className="flex items-center flex-wrap gap-2">
@@ -207,8 +209,8 @@ const Products = () => {
             </select>
           </div>
           <div className="space-x-2">
-            <button onClick={handleFilter} className="px-6 py-2 bg-green-500 text-white">Go</button>
-            <button className="px-6 py-2 bg-green-500 text-white">Reset</button>
+            <button onClick={handleFilter} className="bg-green-500 p-2 rounded hover:shadow-lg font-semibold duration-500 text-xsm text-white px-6 py-2">Go</button>
+            <button className="bg-green-500 p-2 rounded hover:shadow-lg font-semibold duration-500 text-xsm text-white px-6 py-2">Reset</button>
           </div>
         </div>
         {/* category sorting option containing search/select dropdown category and subcategory end here */}

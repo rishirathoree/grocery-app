@@ -14,7 +14,7 @@ const AddCategory = () => {
               onClick={() => {
                 setAddNewUser(!addNewUser);
               }}
-              className="px-3 py-2 bg-green-500 text-white font-semibold"
+              className="bg-green-500 p-2 rounded hover:shadow-lg font-semibold duration-500 text-xsm text-white px-6 py-2"
             >
               Add New Category
             </button>

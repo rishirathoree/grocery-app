@@ -22,7 +22,7 @@ const Category = () => {
                 type="text"
                 className="font-semibold focus:outline-none outline-none lg:w-80 md:w-full sm:w-full text-xsm bg-gray-100 p-2"
               />
-              <button className="px-6 py-2 bg-green-500 text-white font-semibold">
+              <button className="bg-green-500 p-2 rounded hover:shadow-lg font-semibold duration-500 text-xsm text-white px-6 py-2">
                 Reset
               </button>
             </div>
