@@ -34,7 +34,21 @@ const AddNewUserForManagement = () => {
         { value: 'Staff', label: 'Staff' },
       ]
 
-    const assignRole = (selectedRole) => {setRoleSelectedForUser([...roleSelectedForUser,selectedRole])}
+      const assignRole = (role) => {
+        if (roleSelectedForUser.includes(role)) {
+          setRoleSelectedForUser(prevSelectedRoleForUser =>
+            prevSelectedRoleForUser.filter(item => item !== role)
+          );
+        } else {
+          setRoleSelectedForUser(prevSelectedRoleForUser => [
+            ...prevSelectedRoleForUser,
+            role
+          ]);
+        }
+      };
+      
+      console.log(roleSelectedForUser);
+    // const assignRole = (selectedRole) => {setRoleSelectedForUser([...roleSelectedForUser,selectedRole])}
     const assignAdminRolePermission = (selectedRole) => {setSelectedAppPermissionForUser([...SelectedAppPermissionForUser,selectedRole])}
   return (
     <>

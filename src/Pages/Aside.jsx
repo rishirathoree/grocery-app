@@ -134,6 +134,11 @@ const Aside = () => {
       url: '/User-Management',
     },
     {
+      title: 'Runner Management',
+      icon: 'bx bx-user',
+      url: '/RunnerManagement',
+    },
+    {
       title: 'Logout',
       icon: 'bx bx-sign-out',
       url: '/login',

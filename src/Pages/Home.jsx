@@ -28,6 +28,8 @@ import LoyaltyPoints from './LoyaltyPoints'
 import AddLoyaltyPoints from './AddLoyaltyPoints'
 import UserManagement from './UserManagement'
 import AddNewUserForManagement from './AddNewUserForManagement'
+import RunnerManagement from './RunnerManagement'
+import AddRunners from './AddRunners'
 
 
 const Home = () => {
@@ -64,7 +66,8 @@ const Home = () => {
                 <Route path="/config-points/add-loyalty-points" element={<AddLoyaltyPoints />} />
                 <Route path="/User-Management" element={<UserManagement />} />
                 <Route path="/User-Management/Add-New-Role" element={<AddNewUserForManagement />} />
-                
+                <Route path="/RunnerManagement" element={<RunnerManagement />} />
+                <Route path="/RunnerManagement/AddNewRunner" element={<AddRunners />} />
             </Routes>
         </div>
     </>
