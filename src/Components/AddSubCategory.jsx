@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
+import Select from 'react-select'
 
-const AddSubCategory = () => {
+const AddSubCategory = ({options}) => {
     const [addNewUser, setAddNewUser] = useState(false);
     const overlayModal = useRef(null);
     const removeModal = (e) => {
@@ -34,6 +35,7 @@ const AddSubCategory = () => {
               >
                 <p className="font-semibold text-xsm ">Create New Sub Category</p>
                 <input type="text" placeholder="Enter Product Name" className="p-2 bg-gray-50 w-full ring-1 outline-none focus:outline-none ring-black/50 rounded-sm focus:ring-green-500 duration-500 focus:ring-2"/>
+                <Select className='w-full duration-500 focus:outline-none' options={options} />
                 <div className="flex items-center justify-center w-full">
                   <label
                     htmlFor="dropzone-file"

@@ -7,14 +7,14 @@
     font-size: 12px;
 }
 
-body{font-family: 'Poppins', sans-serif}
+body{font-family: 'Inter', sans-serif;}
 
 *{
     padding: 0;margin: 0;box-sizing: border-box;;
 }
 
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
     .sidebar-collapse .asideBar {
       display: block;
       position: fixed;
@@ -29,14 +29,34 @@ body{font-family: 'Poppins', sans-serif}
       padding-left: 0;
       box-shadow: 0 0 10px rgb(0 0 0 / 20%);
       z-index: 999;
-      transition: all 300ms;
+      transition: all ease-in-out 300ms;
       height: 100vh;
     }
   }
   
 
-  .shadow-b-lg {
+.shadow-b-lg {
     --tw-shadow: 0 5px 15px -3px rgb(0 0 0 / 0.05), 0 4px 8px -4px rgb(0 0 0 / 0.01);
     --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

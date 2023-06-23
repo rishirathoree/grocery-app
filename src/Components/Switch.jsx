@@ -60,7 +60,6 @@ const Switch = () => {
     },
   ];
   
-  const tableHead = ['order Id', 'customer name', 'order amount', 'date','Order Staus'];
   const [activeCurrentSwitch, setActiveCurrentSwitch] = useState('Due');
   const activeSwitch = (tab) => { setActiveCurrentSwitch(tab) };
   const filterDataBasedOnTable = userData.filter(item=>item.orderStatus === activeCurrentSwitch)
@@ -84,27 +83,32 @@ const Switch = () => {
         </div>
         <Link to="/orderstatus"><p className='font-semibold hover:underline text-xsm'>View All</p></Link>
         </div>
-        <div className='overflow-x-auto overflow-hidden ring-1 ring-black/5 rounded-md'>
-      <table className='w-full '>
-            <thead className='bg-green-50'>
-              <tr className=''>
-                {tableHead.map((item, index) => {
-                  return (
-                    <td key={index} className='p-2 text-xsm font-light'>{item}</td>
-                  );
-                })}
+        <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+          <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+            <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+              <tr>
+                <th scope="col" className="px-6 py-3">Order ID</th>
+                <th scope="col" className="px-6 py-3">Customer Name</th>
+                <th scope="col" className="px-6 py-3">Order Amount</th>
+                <th scope="col" className="px-6 py-3">Date/Time</th>
+                <th scope="col" className="px-6 py-3">Contact Number</th>
               </tr>
             </thead>
             <tbody>
-              {filterDataBasedOnTable.map((item, index) => (
-                <tr key={index} className='odd:bg-white even:bg-green-50'>
-                  <td className='font-lighter text-left p-2 text-xsm'>{item.orderID}</td>
-      <td className='font-lighter text-left p-2 text-xsm'>{item.customerName}</td>
-      <td className='font-lighter text-left p-2 text-xsm'>{item.totalAmount}</td>
-      <td className='font-lighter text-left p-2 text-xsm'>{item.orderReceivedDate}</td>
-      <td className='font-lighter text-left p-2 text-xsm'>{item.orderStatus}</td>
-                </tr>
-              ))}
+              {filterDataBasedOnTable.map((item, index) => {
+                return (
+                  <tr
+                    key={index}
+                    className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+                  > 
+                    <td className="px-6 py-4">{item.orderID}</td>
+                    <td className="px-6 py-4">{item.customerName}</td>
+                    <td className="px-6 py-4">$32,534</td>
+                    <td className="px-6 py-4">{item.orderReceivedDate}</td>
+                    <td className="px-6 py-4">65451-53205</td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>

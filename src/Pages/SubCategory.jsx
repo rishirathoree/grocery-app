@@ -1,10 +1,16 @@
 import React, { useEffect, useRef, useState } from "react";
 import fruitImg from "../assets/frt.jpg";
-import AddSubCategory from "../Components/AddSubCategory";
+import AddSubCategory from "../Components/AddSubCategory";  
+
 
 const SubCategory = () => {
   const [searchCategoryValue, setSearchCategoryValue] = useState(null);
   const dummyArray = Array(10).fill(1);
+  const options = [
+    { value: 'chocolate', label: 'Chocolate' },
+    { value: 'strawberry', label: 'Strawberry' },
+    { value: 'vanilla', label: 'Vanilla' }
+  ]
   
 
   return (
@@ -29,7 +35,7 @@ const SubCategory = () => {
 
 
           <div className="flex items-center gap-4">
-            <AddSubCategory />
+            <AddSubCategory options={options} />
             
 
             {/* Dropdown Selected */}

@@ -1,195 +1,217 @@
-import React, { useState } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 const Aside = () => {
-  const location = useLocation()
-  const routeActive = location.pathname
-
   const sidebarCategories = [
     {
-      title: "Dashboard",
-      icon: "bx bx-home-alt",
-      url: "/dashboard",
+      title: 'Dashboard',
+      icon: 'bx bx-tachometer',
+      url: '/',
     },
     {
-      title: "Order",
-      icon: "bx bx-package",
-      url: "/order",
+      title: 'Order',
+      icon: 'bx bx-cube',
+      url: '/order',
       subcategories: [
         {
-          title: "Order Status",
-          icon: "bx bx-list-check",
-          url: "/orderstatus",
+          title: 'Orders',
+          icon: 'bx bx-list-check',
+          url: '/Orders',
         },
-      ],
-    },  
-    {
-      title: "Refund",
-      icon: "bx bx-money",
-      url: "/refund",
-      subcategories: [
         {
-          title: "Refund Order",
-          icon: "bx bx-undo",
-          url: "/Refundorder",
+          title: 'Refund Order List',
+          icon: 'bx bx-undo',
+          url: '/RefundOrder',
         },
       ],
     },
     {
-      title: "Manage Grocery",
-      icon: "bx bx-cog",
-      url: "/manage-grocery",
+      title: 'Manage Grocery',
+      icon: 'bx bx-product-hunt',
+      url: '/manage-grocery',
       subcategories: [
         {
-          title: "Category",
-          icon: "bx bx-category",
-          url: "/category",
+          title: 'Category',
+          icon: 'bx bx-category',
+          url: '/Category',
         },
         {
-          title: "Sub Category",
-          icon: "bx bx-cookie",
-          url: "/subcategory",
+          title: 'Sub Category',
+          icon: 'bx bxs-cookie',
+          url: '/SubCategory',
         },
         {
-          title: "Products",
-          icon: "bx bx-list-ul",
-          url: "/products",
+          title: 'Products',
+          icon: 'bx bx-list-ul',
+          url: '/Products',
         },
         {
-          title: "Bulk Import Export",
-          icon: "bx bx-import",
-          url: "/bulk-import-export",
+          title: 'Upload Inventory Images',
+          icon: 'bx bx-upload',
+          url: '/upload-inventory-images',
         },
         {
-          title: "Upload Inventory Images",
-          icon: "bx bx-upload",
-          url: "/upload-inventory-images",
+          title: 'Bulk Import Export',
+          icon: 'bx bx-import',
+          url: '/bulk-import-export',
         },
         {
-          title: "Inventory Stock Settings",
-          icon: "bx bx-cog",
-          url: "/inventory-stock-settings",
+          title: 'Inventory Stock Settings',
+          icon: 'bx bx-cog',
+          url: '/inventory-stock-settings',
         },
         {
-          title: "Out of Stock Variants",
-          icon: "bx bx-error",
-          url: "/out-of-stock-variants",
+          title: 'Out of Stock Variants',
+          icon: 'bx bx-x-circle',
+          url: '/OutStockVariant',
         },
       ],
+    },
+    {
+      title: 'Customers',
+      icon: 'bx bx-user',
+      url: '/users',
+    },
+    {
+      title: 'Marketing & Promotion',
+      icon: 'bx bx-product-hunt',
+      url: '/manage-grocery',
+      subcategories: [
+        {
+          title: 'Coupon',
+          icon: 'bx bxs-coupon',
+          url: '/discounts',
+        },
+        {
+          title: 'Refers & Earn',
+          icon: 'bx bx-gift',
+          url: '/ReferAndEarn',
+        },
+        {
+          title: 'Alert Message',
+          icon: 'bx bx-alarm-exclamation',
+          url: '/alert_messages',
+        },
+      ],
+    },
+    {
+      title: 'Report',
+      icon: 'bx bx-product-hunt',
+      url: '/manage-grocery',
+      subcategories: [
+        {
+          title: 'Sold Item Report',
+          icon: 'bx bxs-cart',
+          url: '/SoldItemReport',
+        },
+        {
+          title: 'Daily Order',
+          icon: 'bx bx-gift',
+          url: '/DailyOrder',
+        },
+      ],
+    },
+    {
+      title: 'Logout',
+      icon: 'bx bx-sign-out',
+      url: '/login',
     },
   ];
+  
 
-  const [activeCategory, setActiveCategory] = useState(0);
-  const handleCategoryClick = (index) => {
-    setActiveCategory(activeCategory === index ? null : index);
+  const location = useLocation();
+  const routeLocation = location.pathname;
+  const [dropdown, setDropdown] = useState('');
+
+  const handleDropdown = (category) => {
+    setDropdown(category === dropdown ? '' : category);
   };
 
   return (
-    <aside className="h-full shadow-xl border-r border-slate-500/9 z-50">
-      <div className="asideBar group  lg:w-[250px] overflow-y-auto md:w-[250px] sm:w-[150px] lg:block md:block sm:hidden duration-300 bg-white h-full">
-      <div className="flex mb-4 p-4  items-center justify-between">
-      <i className={`bx bx-lg text-green-500 bxs-square-rounded `}></i>
-      <i onClick={()=>{document.body.classList.remove('sidebar-collapse')}} className="bx lg:hidden md:hidden sm:block  bx-objects-horizontal-right"></i>
-      </div>
-      <div className="space-y-2 flex items-start justify-center flex-col">
-        
-      {sidebarCategories.map((category, index) => (
-  <div key={index} className={`w-full cursor-pointer duration-700`}>
-    <div
-      className={`flex ${
-        category.subcategories &&
-        category.subcategories.some(subcategory =>
-          routeActive.includes(subcategory.url)
-        )
-          ? "bg-green-500"
-          : "bg-white"
-      } p-4 items-center justify-between`}
-      onClick={() => handleCategoryClick(index)}
-    >
-      <div className="flex items-center gap-2">
+    <aside className="w-1/4 asideBar overflow-hidden overflow-y-auto  lg:block md:block sm:hidden shadow-lg ring-1 ring-black/5 z-50">
+      <div className='lg:p-5 md:p-5 sm:p-5 flex items-center justify-between'>
+        <i className='bx bx-sm bxl-adobe'></i>
         <i
-          className={`${category.icon} ${
-            category.subcategories &&
-            category.subcategories.some(subcategory =>
-              routeActive.includes(subcategory.url)
-            )
-              ? "text-white"
-              : "text-black"
-          }`}
-        ></i>
-
-        {category.subcategories ? (
-          <div
-            className={`font-semibold category-title text-xsm ${
-              category.subcategories &&
-              category.subcategories.some(subcategory =>
-                routeActive.includes(subcategory.url)
-              )
-                ? "text-white"
-                : "text-black"
-            }`}
-          >
-            {category.title}
-          </div>
-        ) : (
-          <p
-            className={`font-semibold category-title text-xsm ${
-              activeCategory === index ? "font-bold" : "font-light"
-            }`}
-          >
-            {category.title}
-          </p>
-        )}
+            onClick={() => {
+              document.body.classList.remove('sidebar-collapse');
+            }}
+            className='bx  duration-500 lg:invisible md:invisible sm:visible bxs-objects-horizontal-right'></i>
       </div>
-      {category.subcategories && (
-        <i
-          className={`bx  ${
-            category.subcategories &&
-            category.subcategories.some(subcategory =>
-              routeActive.includes(subcategory.url)
-            )
-              ? "text-white bx-chevron-up"
-              : "text-black bx-chevron-right"
-          }`}
-        ></i>
-      )}
-    </div>
-
-    {category.subcategories && (
-      <div
-        className={`cursor-pointer ${
-          activeCategory === index ? "opacity-100 translate-y-0 h-min" : "h-0 translate-y-8 opacity-0"
-        } overflow-hidden duration-500 transition-all`}
-      >
-        {category.subcategories.map((subcategory, subIndex) => (
-          <Link key={subIndex} to={subcategory.url}>
-            <div className={`pl-8 flex gap-2 shadow-xl items-center p-3 ${routeActive.includes(subcategory.url) ? "bg-green-500": "bg-white"}`}>
-              <i
-                className={`${subcategory.icon} ${
-                  routeActive.includes(subcategory.url)
-                    ? "font-bold text-white"
-                    : "font-light"
-                } `}
-              ></i>
-              <p
-                className={`font-lighter  ${
-                  routeActive.includes(subcategory.url)
-                    ? "font-bold text-white"
-                    : "font-light"
-                } subcategory-title text-xsm`}
-              >
-                {subcategory.title}
-              </p>
-            </div>
-          </Link>
+      <ul className=''>
+        {sidebarCategories.map((category) => (
+          <li className="" key={category.title}>
+            {category.subcategories ? (
+              <div className="dropdown-toggling">
+                <div
+                  className={`
+                  flex p-4 items-center justify-between
+                  ${
+                    category.subcategories.some((subcategory) =>
+                      routeLocation.includes(subcategory.url)
+                    )
+                      ? 'text-white bg-green-500'
+                      : 'text-black '
+                  }
+                  `}
+                  onClick={() => handleDropdown(category.title)}
+                >
+                  <p className={`duration-500
+                  ${category.subcategories.some((subcategory) => routeLocation.includes(subcategory.url)) ? 'text-sm font-semibold' : 'text-xsm font-semibold'}
+                  `}>{category.title}</p>
+                  <i
+                    className={`
+                    bx ${
+                      dropdown === category.title
+                        ? 'bx-chevron-up'
+                        : 'bx-chevron-down'
+                    }
+                    `}
+                  ></i>
+                </div>
+                <ul
+                  className={`
+                  ${dropdown === category.title ? 'block' : 'hidden'}
+                  `}
+                >
+                  {category.subcategories.map((subcategory) => (
+                    <Link to={subcategory.url} key={subcategory.title}>
+                      <li
+                        className={`
+                          flex items-center gap-2 p-4 pl-6
+                          ${
+                            routeLocation === subcategory.url
+                              ? 'text-white bg-green-500/80'
+                              : 'text-black '
+                          }
+                        `}
+                      >
+                        {/* subcategories icons and p tag */}
+                        <i className={`${subcategory.icon}`}></i>
+                        <p className="font-semibold text-xsm">
+                          {subcategory.title}
+                        </p>
+                      </li>
+                    </Link>
+                  ))}
+                </ul>
+              </div>
+            ) : (
+              <Link to={category.url}>
+                <div
+                onClick={()=>{setDropdown(category)}}
+                  className={`flex p-4 ${
+                    routeLocation === category.url
+                      ? 'text-white bg-green-500/80'
+                      : 'text-black'
+                  } items-center justify-between`}
+                >
+                  <p className={`duration-500 ${routeLocation === category.url ? 'text-sm font-semibold' : 'text-xsm font-semibold'}`}>{category.title}</p>
+                </div>
+              </Link>
+            )}
+          </li>
         ))}
-      </div>
-    )}
-  </div>
-))}
-
-      </div>
-    </div>
+      </ul>
     </aside>
   );
 };

@@ -1,23 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
-
+import Notification from '../Components/Notification';
+import timcook from '../assets/timcook.jpg'
 const Navbar = () => {
   const [showAccountDropdown, setShowAccountDropdown] = useState(false);
-  const inputRef = useRef(null);
   const accountPop = useRef(null)
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (e.ctrlKey && e.key === 'k') {
-        e.preventDefault();
-        inputRef.current && inputRef.current.focus();
-      }
-    };
 
-    document.addEventListener('keydown', handleKeyDown);
-
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-    };
-  }, []);
 
   useEffect(() => {
     const invisiblePopOverAccount = (e) => {
@@ -35,34 +22,29 @@ const Navbar = () => {
 
   return (
     <>
-      <div className='w-full shadow-b-lg bg-white flex items-center justify-between p-4'>
+      <div className='w-full border-b shadow-b-lg bg-white flex items-center justify-between p-4'>
         <div className='space-x-4 flex items-center'>
           <i
             onClick={() => {
               document.body.classList.add('sidebar-collapse');
             }}
-            className='bx lg:invisible duration-500 md:invisible sm:visible bx-objects-horizontal-left'></i>
-          <div className='flex lg:flex md:flex sm:hidden ring-1 ring-black/5 p-2 rounded-md shadow-lg px-4 py-1 items-center space-x-3'>
-            <i className='bx bx-search-alt'></i>
-            <input
-            ref={inputRef}
-            type='text'
-            className='focus:outline-none outline-none font-lighter text-xsm p-2  duration-500  '
-            placeholder='Search'
-          />
-          <div className={`flex space-x-1`}>
-            <p className='font-light uppercase inline-block text-[12px] px-2 py-1 ring-1 ring-black/5'>Ctrl</p>
-            <p className='font-light uppercase inline-block text-[12px] px-2 py-1 ring-1 ring-black/5'>K</p>
-          </div>
-          </div>
+            className='bx lg:invisible duration-500 md:invisible sm:visible bxs-objects-horizontal-left'></i>
         </div>
 
         <div className='space-x-4 flex items-center'>
-          <i className='bx bx-bell'></i>
+          <div className='items-center gap-2 lg:flex md:flex sm:hidden'>
+            <button className='px-6 py-2 text-xsm font-semibold text-white bg-green-500'>Admin FAQ</button>
+            <button className='px-6 py-2 text-xsm font-semibold text-white bg-green-500'>Admin FAQ</button>
+            <button className='px-6 py-2 text-xsm font-semibold text-white bg-green-500'>Admin FAQ</button>
+            <button className='px-6 py-2 text-xsm font-semibold text-white bg-green-500'>View Store</button>
+          </div>
+          <Notification />
           <div className='account-buttons relative'>
             <div className='flex items-center admin-credentials space-x-3'>
               <p className='font-semibold text-xsm'>Admin</p>
-              <div className='w-8 h-8 rounded-md bg-gray-100'></div>
+              <div className='w-8 overflow-hidden shadow-lg h-8 rounded-md bg-gray-100'>
+                <img src={timcook} className='w-full h-full object-cover' alt="" />
+              </div>
               <i
                 onClick={() => {
                   setShowAccountDropdown(!showAccountDropdown);

@@ -164,14 +164,13 @@ const Products = () => {
     return filtersData;
   };
   const filtersData = handleFilter();
-  console.log(filtersData)
   const renderProperData = filtersData.length > 0 ? filtersData : data;
 
   return (
     <>
       <div className="p-4 space-y-6">
         {/* category sorting option containing search/select dropdown category and subcategory */}
-        <Link to="/products/addproducts"><button className="bg-green-500 p-2 rounded hover:shadow-lg font-semibold duration-500 text-xsm text-white"> <i className="bx bx-cart-alt"></i> Add Product</button></Link>
+        <Link to="/Products/addproducts"><button className="bg-green-500 p-2 rounded hover:shadow-lg font-semibold duration-500 text-xsm text-white"> <i className="bx bx-cart-alt"></i> Add Product</button></Link>
         <div className="space-y-4">
           <input onChange={(e)=>{setSearchCategoryValue(e.target.value)}} type="text" className="w-full text-lg p-2 bg-gray-100 focus:outline-none outline-none" />
           <div className="flex items-center flex-wrap gap-2">

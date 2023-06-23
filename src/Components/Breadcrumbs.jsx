@@ -4,13 +4,12 @@ import { Link, useLocation } from 'react-router-dom';
 const Breadcrumbs = () => {
   const location = useLocation();
   const routePath = location.pathname.split('/').filter(item => item !== '');
-  console.log(routePath === null ? 'Dashboard' : routePath)
   return (
-    <nav className="flex px-4 py-4 shadow-b-lg" aria-label="Breadcrumb">
+    <nav className="flex px-4 py-4 border-b" aria-label="Breadcrumb">
       <ol className="inline-flex items-center space-x-1 md:space-x-3">
-      <li className="inline-flex items-center">
+      <li className="lg:block md:block sm:hidden items-center">
             <p className="uppercase text-md mr-4 font-bold text-slate-700/30 dark:text-gray-400 dark:hover:text-white">
-              {routePath.length === 0 ? 'Dashboard' : routePath[routePath.length - 1]}
+              {routePath.length === 0 ? 'Dashboard' : routePath[routePath.length - 1].split('-').join(' ')}
             </p>
         </li>
         <li className="inline-flex items-center">

@@ -1,5 +1,6 @@
   import React, { useEffect, useRef, useState } from 'react'
-
+import { Link } from 'react-router-dom';
+  import Select from 'react-select'
   const OrderStatus = () => {
     const filterMenuDropdown = ['All','Processing','Due','Delivering','Delivered','Rejected','Cancel']
 
@@ -82,6 +83,23 @@
       setUpdateCurrentUpiPaymentMethod(item);
     };
 
+    const runners = [
+      { value: 'chocolate', label: 'Chocolate' },
+      { value: 'strawberry', label: 'Strawberry' },
+      { value: 'vanilla', label: 'Vanilla' }
+    ]
+
+    const runnersStatus = [
+      { value: 'chocolate', label: 'Chocolate' },
+      { value: 'strawberry', label: 'Strawberry' },
+      { value: 'vanilla', label: 'Vanilla' }
+    ]
+    
+    const paymentStatus = [
+      { value: 'chocolate', label: 'Chocolate' },
+      { value: 'strawberry', label: 'Strawberry' },
+      { value: 'vanilla', label: 'Vanilla' }
+    ]
     
     
     
@@ -116,64 +134,53 @@
 
           </div>   
 
-        <div className='overflow-x-auto overflow-hidden ring-1 ring-black/5 rounded-md'>
-        <table className='w-full '>
-        <thead>
-        <tr className='rounded-sm'>
-        <td className='font-lighter p-2 text-xsm'>Order ID</td>
-        <td className='font-lighter p-2 text-xsm'>Customer Name</td>
-        <td className='font-lighter p-2 text-xsm'>Address</td>
-        <td className='font-lighter p-2 text-xsm'>Total amount</td>
-        <td className='font-lighter p-2 text-xsm'>Order Received Date</td>
-        <td className='font-lighter p-2 text-xsm'>Slot Period</td>
-        <td className='font-lighter p-2 text-xsm'>Order Status</td>
-        <td className='font-lighter p-2 text-xsm'>Payment Mode</td>
-        <td className='font-lighter flex items-center gap-2 p-2 text-xsm'>Payment Status</td>
-        </tr>
-        </thead>
-        <tbody>
-
-        {filteredTableBasedOnDropdownValueSelectedWithInput.map((item)=>{
-          return(
-        <tr key={item.orderID} className='text-left even:bg-green-500/5 rounded-sm'>
-        <td className='font-lighter text-left p-2 text-xsm'>{item.orderID}</td>
-        <td className='font-lighter text-left p-2 text-xsm'>{item.customerName}</td>
-        <td className='font-lighter text-left p-2 text-xsm'>{item.address}</td>
-        <td className='font-lighter text-left p-2 text-xsm'>{item.totalAmount}</td>
-        <td className='font-lighter text-left p-2 text-xsm'>{item.orderReceivedDate}</td>
-        <td className='font-lighter text-left p-2 text-xsm'>{item.slotPeriod}</td>
-        <td className='font-lighter text-left p-2 text-xsm'>{item.paymentMode}</td>
-        <td className='font-lighter text-left p-2 text-xsm'>{item.orderStatus}</td>
-        <td className='font-lighter flex items-center gap-2 p-2 text-xsm'>
-
-        <div onClick={()=>{changeOrderStatus(item)}} className='flex relative items-center gap-3 p-2 rounded-md'> <p className='font-semibold text-[8px]'>Payment Status</p><i className='bx bx-edit'></i>
-        {updateCurrentUpiPaymentMethod && updateCurrentUpiPaymentMethod.orderID === item.orderID && (
-                          <div className={`changeStatus absolute z-50 rounded-lg list-none top-8 right-0 bg-white drop-shadow-md ring-1 ring-black/5 block`}>
-                            <li
-                              className='px-6 py-2 cursor-pointer hover:bg-slate-500/5'
-                              onClick={() => handlePaymentStatusUpdate('UPI')}
-                            >
-                              UPI
-                            </li>
-                            <li
-                              className='px-6 py-2 cursor-pointer hover:bg-slate-500/5'
-                              onClick={() => handlePaymentStatusUpdate('Cash on Delivery')}
-                            >
-                              Cash on Delivery
-                            </li>
-                          </div>
-                        )}
-
+          <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+          <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+            <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+              <tr>
+                <th scope="col" className="px-6 py-3">Order ID</th>
+                <th scope="col" className="px-6 py-3">Customer name</th>
+                <th scope="col" className="px-6 py-3">Address</th>
+                <th scope="col" className="px-6 py-3">Total amount</th>
+                <th scope="col" className="px-6 py-3">Date/Time</th>
+                <th scope="col" className="px-6 py-3">Delivery Slot Time</th>
+                <th scope="col" className="px-6 py-3">Order Status</th>
+                <th scope="col" className="px-6 py-3">Runners</th>
+                <th scope="col" className="px-6 py-3">Runner order status</th>
+                <th scope="col" className="px-6 py-3">Payment Status</th>
+                <th scope="col" className="px-6 py-3">View</th>
+              </tr>
+            </thead>
+            <tbody>
+              {filteredTableBasedOnDropdownValueSelectedWithInput.map((item, index) => {
+                return (
+                  <tr
+                    key={index}
+                    className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+                  >
+                    <td  className="px-6 py-4 cursor-pointer">{item.orderID}</td>
+                    <td  className="px-6 py-4 cursor-pointer">{item.customerName}</td>
+                    <td  className="px-6 py-4 cursor-pointer">{item.address}</td>
+                    <td  className="px-6 py-4 cursor-pointer">{item.totalAmount}</td>
+                    <td  className="px-6 py-4 cursor-pointer">{item.orderReceivedDate}</td>
+                    <td  className="px-6 py-4 cursor-pointer">{item.slotPeriod}</td>
+                    <td  className="px-6 py-4 cursor-pointer">{item.orderStatus}</td>
+                    <td  className="px-6 py-4 cursor-pointer "><Select className='w-max duration-500' options={runners} /></td>
+                    <td  className="px-6 py-4 cursor-pointer "><Select className='w-max duration-500' options={runnersStatus} /></td>
+                    <td  className="px-6 py-4 cursor-pointer "><Select className='w-max duration-500' options={paymentStatus} /></td>
+                    <td  className="px-6 py-4 cursor-pointer">
+                      <Link to="/Orders/Orderdetails">
+                      <div className='flex gap-2 items-center '>
+                        <i className='p-3 bg-blue-100/50 rounded-lg bx bxs-pencil'></i>
+                      </div>
+                      </Link>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
         </div>
-
-        <i className='bx bxs-show bg-slate-100 p-2 rounded-md'></i>
-        </td>
-        </tr>
-          )
-        })}
-        </tbody>
-      </table>
-      </div>
       </div>
       
       </>
