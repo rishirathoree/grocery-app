@@ -112,6 +112,28 @@ const Aside = () => {
       ],
     },
     {
+      title: 'Loyalty Program',
+      icon: 'bx bx-product-hunt',
+      url: '/loyalty-program',
+      subcategories: [
+        {
+          title: 'Configure Points',
+          icon: 'bx bxs-coin',
+          url: '/config-points',
+        },
+        {
+          title: 'Loyalty Coupons',
+          icon: 'bx bx-gift',
+          url: '/loyalty-points',
+        },
+      ],
+    },
+    {
+      title: 'User Management',
+      icon: 'bx bx-user',
+      url: '/User-Management',
+    },
+    {
       title: 'Logout',
       icon: 'bx bx-sign-out',
       url: '/login',
@@ -203,7 +225,9 @@ const Aside = () => {
                     routeLocation === category.url
                       ? 'text-white bg-green-500/80'
                       : 'text-black'
-                  } items-center justify-between`}
+                  } 
+                  
+                  items-center justify-between`}
                 >
                   <p className={`duration-500 ${routeLocation === category.url ? 'text-sm font-semibold' : 'text-xsm font-semibold'}`}>{category.title}</p>
                 </div>

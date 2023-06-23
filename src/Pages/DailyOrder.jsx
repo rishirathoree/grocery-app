@@ -4,11 +4,6 @@ import Select from 'react-select'
 
 const DailyOrder = () => {
     const dummyArray = Array(10).fill(1)
-    const paginationPerPageSelectOption = [
-    { value: 20, label: 20 },
-    { value: 50, label: 50 },
-    { value: 100, label: 100 }
-  ]
   return (
     <>
     <div className='p-4 space-y-6'>

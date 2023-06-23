@@ -22,6 +22,12 @@ import AlertMessage from './AlertMessage'
 import MakeNotification from './MakeNotification'
 import SoldItemReport from './SoldItemReport'
 import DailyOrder from './DailyOrder'
+import ConfigPoints from './ConfigPoints'
+import AddNewConfigPoints from './AddNewConfigPoints'
+import LoyaltyPoints from './LoyaltyPoints'
+import AddLoyaltyPoints from './AddLoyaltyPoints'
+import UserManagement from './UserManagement'
+import AddNewUserForManagement from './AddNewUserForManagement'
 
 
 const Home = () => {
@@ -52,6 +58,12 @@ const Home = () => {
                 <Route path="/alert_messages/push-notification" element={<MakeNotification />} />
                 <Route path="/SoldItemReport" element={<SoldItemReport />} />
                 <Route path="/DailyOrder" element={<DailyOrder />} />
+                <Route path="/config-points" element={<ConfigPoints />} />
+                <Route path="/config-points/add-new-config-points" element={<AddNewConfigPoints />} />
+                <Route path="/loyalty-points" element={<LoyaltyPoints />} />
+                <Route path="/config-points/add-loyalty-points" element={<AddLoyaltyPoints />} />
+                <Route path="/User-Management" element={<UserManagement />} />
+                <Route path="/User-Management/Add-New-Role" element={<AddNewUserForManagement />} />
                 
             </Routes>
         </div>

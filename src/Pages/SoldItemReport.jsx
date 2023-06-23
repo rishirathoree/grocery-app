@@ -4,19 +4,14 @@ import Select from 'react-select'
 
 const SoldItemReport = () => {
     const dummyArray = Array(10).fill(1)
-    const paginationPerPageSelectOption = [
-    { value: 20, label: 20 },
-    { value: 50, label: 50 },
-    { value: 100, label: 100 }
-  ]
   return (
     <>
     <div className='p-4 space-y-6'>
 
     <div className='flex items-center lg:flex-row md:flex-row sm:flex-col sm:items-start justify-between gap-2 rounded-lg'>
         <div className='flex gap-2 items-center w-full'>
-        <Link className='w-full' to="/alert_messages/push-notification"><button className='px-6 w-full py-3 font-semibold text-xsm text-white bg-green-500'>Export Data</button></Link>
-        <Link className='w-full' to="/alert_messages/push-notification"><button className='px-6 w-full py-3 font-semibold text-xsm text-white bg-green-500'>Top Products</button></Link>
+      <button className='px-6 w-full py-3 font-semibold text-xsm text-white bg-green-500'>Export Data</button>
+      <button className='px-6 w-full py-3 font-semibold text-xsm text-white bg-green-500'>Top Products</button>
         </div>
     </div>
     
