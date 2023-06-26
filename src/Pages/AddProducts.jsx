@@ -12,7 +12,6 @@ const AddProducts = () => {
   const [selectedCtg, setSelectedCtg] = useState('');
   const [selectedSubCtg, setSelectedSubCtg] = useState('');
   const [tags, setTags] = useState([]);
-  console.log(productImage);
   const handleInputKeydown = (e) => {
     if(tags.length > 2) return;
     if (e.key === 'Enter' && inputValue.trim() !== '') {
@@ -264,7 +263,7 @@ const AddProducts = () => {
           }
 
           <div>
-            <button className="font-semibold text-xsm px-6 py-3 bg-green-500 text-white rounded ">Add Product</button>
+            <button className="font-semibold text-xsm px-6 py-3 bg-[#7bff95] text-black rounded ">Add Product</button>
             <button className="font-semibold text-xsm px-6 py-3 bg-slate-500 text-white mx-2 rounded  ">Cancel</button>
           </div>
       </div>

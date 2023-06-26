@@ -5,7 +5,7 @@ const UserManagement = () => {
   return (
     <>
     <div className='p-4 space-y-6'>
-        <Link to="/User-Management/Add-New-Role"><button className='bg-green-500 text-xsm font-semibold py-2 px-6 text-white'>Add New User Role</button></Link>
+        <Link to="/User-Management/Add-New-Role"><button className='bg-[#7bff95] text-xsm font-semibold py-2 px-6 text-black'>Add New User Role</button></Link>
         <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
           <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
             <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">

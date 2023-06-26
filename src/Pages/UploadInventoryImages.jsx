@@ -31,10 +31,10 @@ const UploadInventoryImages = () => {
     {/* table */}
     <div className='p-4 space-y-6'>
         <div className='flex items-center gap-4'>
-            <button onClick={()=>{setShowAddImagePopup(!showAddImagePopup)}} className='px-6 py-2 bg-green-500 font-semibold text-xsm text-white'>Add Images</button>
+            <button onClick={()=>{setShowAddImagePopup(!showAddImagePopup)}} className='px-6 py-2 bg-[#7bff95] font-semibold text-xsm text-black'>Add Images</button>
             <Select onChange={(e)=>{setPageValuePerPage(e.value)}} options={options} />
             <input onChange={(e)=>{setIN}} type="text" className='p-2 bg-gray-100/50 ring-1 ring-black/10 focus:outline-none outline-none' />
-            <button onChange={()=>{setSearchValue(e.target.value)}} className="px-6 py-2 bg-green-500 text-white font-semibold">GO</button>
+            <button onChange={()=>{setSearchValue(e.target.value)}} className="px-6 py-2 bg-[#7bff95] text-black font-semibold">GO</button>
         </div>
     <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
           <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -92,8 +92,8 @@ const UploadInventoryImages = () => {
           </table>
         </div>
         <div className='btn-next-prev flex gap-2'>
-        <button disabled={pageIndex === 0} onClick={()=>{setPageIndex(prev => prev - 1)}} className="bg-green-500 p-2 rounded hover:shadow-lg font-semibold duration-500 text-xsm text-white"> <i className="bx bx-chevron-left"></i>Prev</button>
-        <button onClick={()=>{setPageIndex(prev => prev + 1)}} className="bg-green-500 p-2 rounded hover:shadow-lg font-semibold duration-500 text-xsm text-white"> <i className="bx bx-chevron-right"></i>Next</button>
+        <button disabled={pageIndex === 0} onClick={()=>{setPageIndex(prev => prev - 1)}} className="bg-[#7bff95] p-2 rounded hover:shadow-lg font-semibold duration-500 text-xsm text-white"> <i className="bx bx-chevron-left"></i>Prev</button>
+        <button onClick={()=>{setPageIndex(prev => prev + 1)}} className="bg-[#7bff95] p-2 rounded hover:shadow-lg font-semibold duration-500 text-xsm text-white"> <i className="bx bx-chevron-right"></i>Next</button>
         </div>
     </div>
     <div onClick={removeShowAddImagePopup} ref={popUp} className={`${showAddImagePopup ? 'visible opacity-100' : 'invisible opacity-0'} flex duration-500 items-center justify-center w-full h-screen absolute top-0 right-0 bg-black z-50 bg-opacity-10`}>

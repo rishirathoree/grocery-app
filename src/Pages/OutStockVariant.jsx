@@ -16,12 +16,12 @@ const OutStockVariant = () => {
         <div className='grid grid-cols-1'>
             <div className='flex gap-2 justify-between items-center'>
                 <div className='flex items-center gap-2'>
-                <button className='px-6 py-2 bg-green-500 font-semibold text-xsm text-white'>Export Variants</button>
+                <button className='px-6 py-2 bg-[#7bff95] font-semibold text-xsm text-black'>Export Variants</button>
                 <Select className='duration-500' options={PaginationOptions} />
                 </div>
                 <div className='flex items-center gap-2'>
                 <input type="text" className='focus:outline-none outline-none p-3 bg-gray-100 text-xsm font-semibold'/>
-                <button className='px-6 py-2 bg-green-500 font-semibold text-xsm text-white'>Search</button>
+                <button className='px-6 py-2 bg-[#7bff95] font-semibold text-xsm text-black'>Search</button>
                 </div>
             </div>
         </div>
@@ -47,7 +47,7 @@ const OutStockVariant = () => {
                     key={index}
                     className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
                   >
-                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-black">
                       <div className="w-16 shadow-xl h-16 rounded-lg bg-white overflow-hidden">
                         <img src={fruitImg} className='w-full h-full object-cover' alt="" />
                       </div>

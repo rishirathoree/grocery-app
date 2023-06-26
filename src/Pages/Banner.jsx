@@ -1,20 +1,19 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Select from 'react-select'
-
-const ConfigPoints = () => {
-    const dummyArray = Array(10).fill(1)
+const Banner = () => {
+    const dummyArray = Array(5).fill(1)
   return (
-    <>
     <div className='p-4 space-y-6'>
-            <Link to="/config-points/add-new-config-points"><button className='px-6 py-2 w-max font-semibold text-xsm bg-[#7bff95] text-black'>Add New Config Points</button></Link>
-
-    <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+        <Link to="/Banners/AddBanner"><span className='px-6 py-2 font-semibold text-xsm inline-block text-white bg-[#7bff95]'>Add Banner</span></Link>
+        
+        
+        <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
           <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
             <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
               <tr>
-                <th scope="col" className="px-6 py-3">Points</th>
-                <th scope="col" className="px-6 py-3">Order Amount</th>
+                <th scope="col" className="px-6 py-3">Banner</th>
+                <th scope="col" className="px-6 py-3">Caption</th>
+                <th scope="col" className="px-6 py-3">Image</th>
                 <th scope="col" className="px-6 py-3">Action</th>
               </tr>
             </thead>
@@ -25,10 +24,12 @@ const ConfigPoints = () => {
                     key={index}
                     className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
                   >
-                    <td className="px-6 py-4">{index + 1}</td>
-                    <td className="px-6 py-4">How about an Ice Candy to beat the heat ..!</td>
+                    <td className="px-6 py-4 cursor-pointer hover:underline">Top Banner</td>
+                    <td className="px-6 py-4">Ice</td>
+                    <td className="px-6 py-4"><div className='w-20 h-20 ring-1 ring-black/5 rounded-lg'></div></td>
                     <td className="flex items-center px-6 py-8 space-x-3 text-center">
                       <div className="flex gap-4 items-center ">
+                        <i className="bx cursor-pointer bx-sm bx-pencil"></i>
                         <i className="bx cursor-pointer bx-sm bx-trash"></i>
                       </div>
                     </td>
@@ -38,9 +39,9 @@ const ConfigPoints = () => {
             </tbody>
           </table>
         </div>
+
     </div>
-    </>
   )
 }
 
-export default ConfigPoints
+export default Banner

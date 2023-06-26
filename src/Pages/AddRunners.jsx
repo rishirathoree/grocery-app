@@ -19,23 +19,22 @@ const AddRunners = () => {
         reader.readAsDataURL(file)
     }
   }
-  console.log(runnerImage)
   return (
     <div className='p-4 space-y-6'>
         <div className='flex items-center gap-4 w-full'>
             <label htmlFor="runner-name" className='w-full'>
                 <p className='font-semibold text-xsm'>Name</p>
-                <input type="text" className='w-full p-2 bg-gray-50 duration-500 hover:ring-1 hover:ring-black/5 ' />
+                <input type="text" className='w-full p-2 bg-gray-50 duration-500 hover:ring-1 focus:outline-none outline-none checked:bg-[#7bff95] hover:ring-black/5 ' />
             </label>
 
             <label htmlFor="runner-email" className='w-full'>
                 <p className='font-semibold text-xsm'>Email</p>
-                <input type="text" className='w-full p-2 bg-gray-50 duration-500 hover:ring-1 hover:ring-black/5 ' />
+                <input type="text" className='w-full p-2 bg-gray-50 duration-500 hover:ring-1 focus:outline-none outline-none checked:bg-[#7bff95] hover:ring-black/5 ' />
             </label>
 
             <label htmlFor="runner-number" className='w-full'>
                 <p className='font-semibold text-xsm'>Mobile Number</p>
-                <input type="text" className='w-full p-2 bg-gray-50 duration-500 hover:ring-1 hover:ring-black/5 ' />
+                <input type="text" className='w-full p-2 bg-gray-50 duration-500 hover:ring-1 focus:outline-none outline-none checked:bg-[#7bff95] hover:ring-black/5 ' />
             </label>
 
         </div>
@@ -69,9 +68,8 @@ const AddRunners = () => {
           <Select placeholder='Select Status' className='w-full text-xsm font-semibold' options={selectAreaRunner} />
           </div>
 
-          <button className='px-6 py-2 bg-green-500 text-xsm hover:bg-green-600 font-semibold mr-2 text-white'>Save</button>
-          <button className='px-6 py-2 bg-green-500 text-xsm hover:bg-green-600 font-semibold text-white'>Cancel</button>
-          
+          <button className='px-6 py-2 bg-[#7bff95] text-xsm hover:bg-green-600 font-semibold mr-2 text-white'>Save</button>
+          <button className='px-6 py-2 bg-[#7bff95] text-xsm hover:bg-green-600 font-semibold text-white'>Cancel</button>
 
     </div>
   )

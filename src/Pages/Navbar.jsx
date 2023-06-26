@@ -22,7 +22,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className='w-full border-b shadow-b-lg bg-white flex items-center justify-between p-4'>
+      <div className='w-full shadow-b-lg bg-white flex items-center justify-between p-4'>
         <div className='space-x-4 flex items-center'>
           <i
             onClick={() => {
@@ -33,10 +33,10 @@ const Navbar = () => {
 
         <div className='space-x-4 flex items-center'>
           <div className='items-center gap-2 lg:flex md:flex sm:hidden'>
-            <button className='px-6 py-2 text-xsm font-semibold text-white bg-green-500'>Admin FAQ</button>
-            <button className='px-6 py-2 text-xsm font-semibold text-white bg-green-500'>Admin FAQ</button>
-            <button className='px-6 py-2 text-xsm font-semibold text-white bg-green-500'>Admin FAQ</button>
-            <button className='px-6 py-2 text-xsm font-semibold text-white bg-green-500'>View Store</button>
+            <button className='px-6 py-2 text-xsm font-semibold text-black bg-[#7bff95]'>Admin FAQ</button>
+            <button className='px-6 py-2 text-xsm font-semibold text-black bg-[#7bff95]'>Admin FAQ</button>
+            <button className='px-6 py-2 text-xsm font-semibold text-black bg-[#7bff95]'>Admin FAQ</button>
+            <button className='px-6 py-2 text-xsm font-semibold text-black bg-[#7bff95]'>View Store</button>
           </div>
           <Notification />
           <div className='account-buttons relative'>

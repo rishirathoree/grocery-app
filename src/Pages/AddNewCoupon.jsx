@@ -38,25 +38,25 @@ const AddNewCoupon = () => {
         <label htmlFor="couponType" className='w-full'>
         <div className='p-4 space-y-2'>
         <p className='font-semibold text-xsm'>Offer Name*</p>
-        <input type="text" className='w-full p-2 bg-gray-50 ring-1 ring-green-500/50 focus:outline-none outline-none rounded' />
+        <input type="text" className='w-full p-2 bg-gray-50 duration-500 hover:ring-1 hover:ring-[#7bff95] focus:outline-none outline-none rounded' />
         </div>
         </label>
         <label htmlFor="couponType" className='w-full'>
         <div className='p-4 space-y-2'>
         <p className='font-semibold text-xsm'>Coupon Code*</p>
-        <input type="text" className='w-full p-2 bg-gray-50 ring-1 ring-green-500/50 focus:outline-none outline-none rounded' />
+        <input type="text" className='w-full p-2 bg-gray-50 duration-500 hover:ring-1 hover:ring-[#7bff95] focus:outline-none outline-none rounded' />
         </div>
         </label>
         <label htmlFor="couponType" className='w-full'>
         <div className='p-4 space-y-2'>
         <p className='font-semibold text-xsm'>Discount (%)*</p>
-        <input type="text" className='w-full p-2 bg-gray-50 ring-1 ring-green-500/50 focus:outline-none outline-none rounded' />
+        <input type="text" className='w-full p-2 bg-gray-50 duration-500 hover:ring-1 hover:ring-[#7bff95] focus:outline-none outline-none rounded' />
         </div>
         </label>
         <label htmlFor="couponType" className='w-full'>
         <div className='p-4 space-y-2'>
         <p className='font-semibold text-xsm'>Discounted Amount Upto *</p>
-        <input type="text" className='w-full p-2 bg-gray-50 ring-1 ring-green-500/50 focus:outline-none outline-none rounded' />
+        <input type="text" className='w-full p-2 bg-gray-50 duration-500 hover:ring-1 hover:ring-[#7bff95] focus:outline-none outline-none rounded' />
         </div>
         </label>
         </div>
@@ -70,7 +70,7 @@ const AddNewCoupon = () => {
         <label htmlFor="couponType" className='w-full'>
         <div className='p-4 space-y-2'>
         <p className='font-semibold text-xsm'>Minimum Order Amount*</p>
-        <input type="number" className='w-full p-2 bg-gray-50 ring-1 ring-green-500/50 focus:outline-none outline-none rounded' />
+        <input type="number" className='w-full p-2 bg-gray-50 duration-500 hover:ring-1 hover:ring-[#7bff95] focus:outline-none outline-none rounded' />
         </div>
         </label>
 
@@ -78,8 +78,8 @@ const AddNewCoupon = () => {
         <div className='p-4 space-y-2'>
         <p className='font-semibold text-xsm'>Usage Per Customer</p>
         <div className='flex rounded-lg overflow-hidden items-center justify-between text-center'>
-        <span onClick={()=>{setUsagePerCustomer('Nolimit')}} className={`w-full duration-500 font-semibold text-xsm bg-green-400 p-2 ${usagePerCustomer === 'Nolimit' ? 'ring-1 ring-black/5 bg-green-600/80 text-white' : ''}`}>No Limit</span>
-        <span onClick={()=>{setUsagePerCustomer('limit')}} className={`w-full duration-500 font-semibold text-xsm bg-green-400 p-2 ${usagePerCustomer === 'limit' ? 'ring-1 ring-black/5 bg-green-600/80 text-white' : ''}`}>Limit</span>
+        <span onClick={()=>{setUsagePerCustomer('Nolimit')}} className={`w-full duration-500 font-semibold text-xsm bg-[#7bff95] p-2 ${usagePerCustomer === 'Nolimit' ? 'ring-1 ring-black/5 bg-[#59be6d] text-white' : ''}`}>No Limit</span>
+        <span onClick={()=>{setUsagePerCustomer('limit')}} className={`w-full duration-500 font-semibold text-xsm bg-[#7bff95] p-2 ${usagePerCustomer === 'limit' ? 'ring-1 ring-black/5  bg-[#59be6d] text-white' : ''}`}>Limit</span>
         </div>
         </div>
         </label>
@@ -94,13 +94,13 @@ const AddNewCoupon = () => {
         <label htmlFor="couponType" className='w-full'>
         <div className='p-4 space-y-2'>
         <p className='font-semibold text-xsm'>Date From*</p>
-        <input type="date" className='w-full p-2 bg-gray-50 ring-1 ring-green-500/50 focus:outline-none outline-none rounded' />
+        <input type="date" className='w-full p-2 bg-gray-50 duration-500 hover:ring-1 hover:ring-[#7bff95] focus:outline-none outline-none rounded' />
         </div>
         </label>
         <label htmlFor="couponType" className='w-full'>
         <div className='p-4 space-y-2'>
         <p className='font-semibold text-xsm'>Coupon Code*</p>
-        <input type="date" className='w-full p-2 bg-gray-50 ring-1 ring-green-500/50 focus:outline-none outline-none rounded' />
+        <input type="date" className='w-full p-2 bg-gray-50 duration-500 hover:ring-1 hover:ring-[#7bff95] focus:outline-none outline-none rounded' />
         </div>
         </label>
         </div>
@@ -137,7 +137,7 @@ const AddNewCoupon = () => {
       </div>
 
       <div className='flex items-end justify-end gap-2'>
-        <button className='px-6 py-3 rounded hover:bg-green-600/80 duration-200 hover:scale-105 bg-green-500 text-xsm font-semibold text-white'>Submit</button>
+        <button className='px-6 py-3 rounded hover:bg-[#72f18c] duration-200 hover:scale-105 bg-[#7bff95] text-xsm font-semibold text-black'>Submit</button>
         <button className='px-6 py-3 rounded bg-slate-500 text-xsm font-semibold text-white'>Cancel</button>
       </div>
       

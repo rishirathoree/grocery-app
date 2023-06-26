@@ -6,7 +6,7 @@ const LoyaltyPoints = () => {
   return (
     <>
     <div className='p-4 space-y-6'>
-            <Link to="/config-points/add-loyalty-points"><button className='px-6 py-2 w-max font-semibold text-xsm text-white bg-green-500'>Add New Loyalty Points</button></Link>
+            <Link to="/config-points/add-loyalty-points"><button className='px-6 py-2 w-max font-semibold text-xsm bg-[#7bff95] text-black'>Add New Loyalty Points</button></Link>
 
     <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
           <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">

@@ -74,7 +74,7 @@ const Switch = () => {
               <p
                 key={index}
                 onClick={() => { activeSwitch(item) }}
-                className={`cursor-pointer font-semibold py-2 px-6 duration-200 text-xsm ${activeCurrentSwitch === item ? 'bg-green-500/50 text-white inline-block' : 'bg-none'}`}
+                className={`cursor-pointer font-semibold py-2 px-6 duration-200 text-xsm ${activeCurrentSwitch === item ? 'text-black bg-[#7bff95] inline-block' : 'bg-none'}`}
               >
                 {item}
               </p>

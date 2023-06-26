@@ -7,7 +7,6 @@ const Products = () => {
   const [selectedCategory, setSelectedCategory] = useState('');
   const [selectedSubCategory, setSelectedSubCategory] = useState('');
   const [selectedStatus, setSelectedStatus] = useState('');
-  console.log(selectedCategory,selectedSubCategory,selectedStatus)
   const data = [
     {
       status: 'Active',
@@ -170,7 +169,7 @@ const Products = () => {
     <>
       <div className="p-4 space-y-6">
         {/* category sorting option containing search/select dropdown category and subcategory */}
-        <Link to="/Products/addproducts"><button className="bg-green-500 p-2 rounded hover:shadow-lg font-semibold duration-500 text-xsm text-white"> <i className="bx bx-cart-alt"></i> Add Product</button></Link>
+        <Link to="/Products/addproducts"><button className="bg-[#7bff95] p-2 rounded hover:shadow-lg font-semibold duration-500 text-xsm text-black"> <i className="bx bx-cart-alt"></i> Add Product</button></Link>
         <div className="space-y-4">
           <input onChange={(e)=>{setSearchCategoryValue(e.target.value)}} type="text" className="w-full text-lg p-2 bg-gray-100 focus:outline-none outline-none" />
           <div className="flex items-center flex-wrap gap-2">
@@ -208,8 +207,8 @@ const Products = () => {
             </select>
           </div>
           <div className="space-x-2">
-            <button onClick={handleFilter} className="bg-green-500 p-2 rounded hover:shadow-lg font-semibold duration-500 text-xsm text-white px-6 py-2">Go</button>
-            <button className="bg-green-500 p-2 rounded hover:shadow-lg font-semibold duration-500 text-xsm text-white px-6 py-2">Reset</button>
+            <button onClick={handleFilter} className="bg-[#7bff95] p-2 rounded hover:shadow-lg font-semibold duration-500 text-xsm text-black px-6 py-2">Go</button>
+            <button className="bg-[#7bff95] p-2 rounded hover:shadow-lg font-semibold duration-500 text-xsm text-black px-6 py-2">Reset</button>
           </div>
         </div>
         {/* category sorting option containing search/select dropdown category and subcategory end here */}

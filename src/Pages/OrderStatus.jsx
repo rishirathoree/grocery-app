@@ -66,7 +66,6 @@ import { Link } from 'react-router-dom';
     
     const [showDropdown,setShowDropdown] = useState(false)
     const [searchInputValue,setSearchInputValue] = useState(null)
-    console.log(searchInputValue)
 
     const [activeDropdownSortFilter,setactiveDropdownSortFilter] = useState('All')
     
@@ -124,7 +123,7 @@ import { Link } from 'react-router-dom';
               <div className={`absolute top-12 duration-100 ring-1 ring-black/5 shadow-lg right-0 z-50 bg-white ${showDropdown ? 'visible translate-x-0' : ' invisible translate-x-2'}`}>
                 {filterMenuDropdown.map((item,i)=>{
                   return(
-                    <li onClick={()=>{setactiveDropdownSortFilter(item)}} className='list-none font-light text-xsm px-3 py-2 hover:bg-green-100' key={i}>{item}</li>
+                    <li onClick={()=>{setactiveDropdownSortFilter(item)}} className='list-none font-light text-xsm px-3 py-2 duration-500 hover:bg-[#7bff95]' key={i}>{item}</li>
                   )
                 })}
               </div>

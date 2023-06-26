@@ -20,14 +20,14 @@ const AddLoyaltyPoints = () => {
       <div>
           <p className='font-semibold text-xsm'>Status</p>
           <div className='checkboxforStatus flex gap-2 items-center'>
-                  <span onClick={()=>{setStatusMode('Active')}} className={`font-semibold duration-500 cursor-pointer text-xsm bg-green-500 p-2 px-6 text-white ${statusMode === 'Active' ? 'bg-green-600' : ''}`}>Active</span>
-                  <span onClick={()=>{setStatusMode('Inactive')}} className={`font-semibold duration-500 cursor-pointer text-xsm bg-green-500 p-2 px-6 text-white ${statusMode === 'Inactive' ? 'bg-green-600' : ''}`}>In-active</span>
+                  <span onClick={()=>{setStatusMode('Active')}} className={`font-semibold duration-500 cursor-pointer text-xsm bg-[#7bff95] p-2 px-6 text-white ${statusMode === 'Active' ? 'bg-green-700/50' : ''}`}>Active</span>
+                  <span onClick={()=>{setStatusMode('Inactive')}} className={`font-semibold duration-500 cursor-pointer text-xsm bg-[#7bff95] p-2 px-6 text-white ${statusMode === 'Inactive' ? 'bg-green-700/50' : ''}`}>In-active</span>
           </div>
       </div>
   
       <div className='w-full flex items-end justify-end border-t border-black/5 pt-4 gap-2'>
-          <button className='font-semibold duration-500 text-xsm bg-green-500 text-white hover:bg-green-600 p-2 px-6'>Save</button>
-          <button className='font-semibold duration-500 text-xsm bg-green-500 text-white hover:bg-green-600 p-2 px-6'>Close</button>
+          <button className='font-semibold duration-500 text-xsm bg-[#7bff95] text-white hover:bg-green-600 p-2 px-6'>Save</button>
+          <button className='font-semibold duration-500 text-xsm bg-[#7bff95] text-white hover:bg-green-600 p-2 px-6'>Close</button>
       </div>
       </div>
       </>

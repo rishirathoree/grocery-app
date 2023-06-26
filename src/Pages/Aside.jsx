@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-
 const Aside = () => {
   const sidebarCategories = [
     {
       title: 'Dashboard',
-      icon: 'bx bx-tachometer',
+      icon: 'bx bxs-customize',
       url: '/',
     },
     {
@@ -27,7 +26,7 @@ const Aside = () => {
     },
     {
       title: 'Manage Grocery',
-      icon: 'bx bx-product-hunt',
+      icon: 'bx bx-store',
       url: '/manage-grocery',
       subcategories: [
         {
@@ -57,7 +56,7 @@ const Aside = () => {
         },
         {
           title: 'Inventory Stock Settings',
-          icon: 'bx bx-cog',
+          icon: 'bx bxs-layer',
           url: '/inventory-stock-settings',
         },
         {
@@ -74,7 +73,7 @@ const Aside = () => {
     },
     {
       title: 'Marketing & Promotion',
-      icon: 'bx bx-product-hunt',
+      icon: 'bx bx-devices',
       url: '/manage-grocery',
       subcategories: [
         {
@@ -96,7 +95,7 @@ const Aside = () => {
     },
     {
       title: 'Report',
-      icon: 'bx bx-product-hunt',
+      icon: 'bx bxs-report',
       url: '/manage-grocery',
       subcategories: [
         {
@@ -113,7 +112,7 @@ const Aside = () => {
     },
     {
       title: 'Loyalty Program',
-      icon: 'bx bx-product-hunt',
+      icon: 'bx bxs-offer',
       url: '/loyalty-program',
       subcategories: [
         {
@@ -130,17 +129,91 @@ const Aside = () => {
     },
     {
       title: 'User Management',
-      icon: 'bx bx-user',
+      icon: 'bx bx-layer',
       url: '/User-Management',
     },
     {
       title: 'Runner Management',
-      icon: 'bx bx-user',
+      icon: 'bx bx-run',
       url: '/RunnerManagement',
     },
     {
+      title: 'Enquiry Form',
+      icon: 'bx bx-receipt',
+      url: '/Enquires',
+    },
+    {
+      title: 'Content Management',
+      icon: 'bx bx-book-content',
+      url: '/Content-Management',
+      subcategories: [
+        {
+          title: 'Banners',
+          icon: 'bx bx-image',
+          url: '/Banners',
+        },
+        {
+          title: 'Pages',
+          icon: 'bx bx-circle',
+          url: '/pages',
+        },
+        {
+          title: 'FAQ',
+          icon: 'bx bxs-notepad',
+          url: '/Faq',
+        },
+      ],
+    },
+    {
+      title: 'Setting',
+      icon: 'bx bx-cog',
+      url: '/Content-Management',
+      subcategories: [
+        {
+          title: 'Store Information',
+          icon: 'bx bx-building-house',
+          url: '/StoreInformation',
+        },
+        {
+          title: 'Features Setting',
+          icon: 'bx bxs-zap',
+          url: '/FeaturesSetting',
+        },
+        {
+          title: 'Online Payment Store',
+          icon: 'bx bx-building-house',
+          url: '/payment_settings',
+        },
+        // {
+        //   title: 'Tax Setting',
+        //   icon: 'bx bxs-zap',
+        //   url: '/pages',
+        // },
+        // {
+        //   title: 'Store Time Information',
+        //   icon: 'bx bx-building-house',
+        //   url: '/Banners',
+        // },
+        // {
+        //   title: 'Delivery Slot Setting',
+        //   icon: 'bx bxs-zap',
+        //   url: '/pages',
+        // },
+        // {
+        //   title: 'Delivery Areas',
+        //   icon: 'bx bxs-zap',
+        //   url: '/pages',
+        // },
+        {
+          title: 'Social Media Management',
+          icon: 'bx bxs-zap',
+          url: '/Social_linkings',
+        },
+      ],
+    },
+    {
       title: 'Logout',
-      icon: 'bx bx-sign-out',
+      icon: 'bx bx-log-out',
       url: '/login',
     },
   ];
@@ -155,9 +228,12 @@ const Aside = () => {
   };
 
   return (
-    <aside className="w-1/4 asideBar overflow-hidden overflow-y-auto  lg:block md:block sm:hidden shadow-lg ring-1 ring-black/5 z-50">
+    <aside className="w-1/4  asideBar overflow-hidden overflow-y-auto  lg:block md:block sm:hidden shadow-lg ring-1 ring-black/5 z-[500]">
       <div className='lg:p-5 md:p-5 sm:p-5 flex items-center justify-between'>
-        <i className='bx bx-sm bxl-adobe'></i>
+        <div className='flex items-center gap-2'>
+        {/* <i className='bx bxs-cart animate-bounce'></i> */}
+        <p className='font-semibold text-lg'>Sasta Grocery</p>
+        </div>
         <i
             onClick={() => {
               document.body.classList.remove('sidebar-collapse');
@@ -171,20 +247,23 @@ const Aside = () => {
               <div className="dropdown-toggling">
                 <div
                   className={`
-                  flex p-4 items-center justify-between
+                  flex p-4 items-center hover:bg-[#c7ffd36a] justify-between
                   ${
                     category.subcategories.some((subcategory) =>
                       routeLocation.includes(subcategory.url)
                     )
-                      ? 'text-white bg-green-500'
+                      ? 'text-black bg-[#C8FFD4]'
                       : 'text-black '
                   }
                   `}
                   onClick={() => handleDropdown(category.title)}
                 >
+                  <div className='flex  items-center gap-2'>
+                  <i className={`${category.icon}`}></i>
                   <p className={`duration-500
-                  ${category.subcategories.some((subcategory) => routeLocation.includes(subcategory.url)) ? 'text-sm font-semibold' : 'text-xsm font-semibold'}
+                  ${category.subcategories.some((subcategory) => routeLocation.includes(subcategory.url)) ? 'text-xsm font-semibold' : 'text-xsm font-semibold'}
                   `}>{category.title}</p>
+                  </div>
                   <i
                     className={`
                     bx ${
@@ -196,7 +275,7 @@ const Aside = () => {
                   ></i>
                 </div>
                 <ul
-                  className={`
+                  className={`duration-500 bg-slate-50/70
                   ${dropdown === category.title ? 'block' : 'hidden'}
                   `}
                 >
@@ -204,11 +283,11 @@ const Aside = () => {
                     <Link to={subcategory.url} key={subcategory.title}>
                       <li
                         className={`
-                          flex items-center gap-2 p-4 pl-6
+                          flex items-center hover:bg-[#c7ffd36a] gap-2 p-3 pl-12 
                           ${
                             routeLocation === subcategory.url
-                              ? 'text-white bg-green-500/80'
-                              : 'text-black '
+                              ? 'text-black bg-[#7bff95]'
+                              : 'text-slate-500'
                           }
                         `}
                       >
@@ -226,15 +305,18 @@ const Aside = () => {
               <Link to={category.url}>
                 <div
                 onClick={()=>{setDropdown(category)}}
-                  className={`flex p-4 ${
+                  className={`flex hover:bg-[#c7ffd36a] p-4 ${
                     routeLocation === category.url
-                      ? 'text-white bg-green-500/80'
+                      ? 'text-black bg-[#C8FFD4]'
                       : 'text-black'
                   } 
                   
                   items-center justify-between`}
                 >
-                  <p className={`duration-500 ${routeLocation === category.url ? 'text-sm font-semibold' : 'text-xsm font-semibold'}`}>{category.title}</p>
+                  <div className='flex  items-center gap-2'>
+                  <i className={`${category.icon}`}></i>
+                  <p className={`duration-500 ${routeLocation === category.url ? 'text-xsm font-semibold' : 'text-xsm font-semibold'}`}>{category.title}</p>
+                  </div>
                 </div>
               </Link>
             )}

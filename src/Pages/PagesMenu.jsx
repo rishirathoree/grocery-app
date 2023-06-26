@@ -1,21 +1,19 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Select from 'react-select'
-
-const ConfigPoints = () => {
-    const dummyArray = Array(10).fill(1)
+const PagesMenu = () => {
+    const dummyArray = Array(4).fill(1)
   return (
-    <>
     <div className='p-4 space-y-6'>
-            <Link to="/config-points/add-new-config-points"><button className='px-6 py-2 w-max font-semibold text-xsm bg-[#7bff95] text-black'>Add New Config Points</button></Link>
 
-    <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+        <div>
+            <Link to="/pages/addpages"><button className='px-6 py-2 text-xsm font-semibold bg-[#7bff95] text-white'>Add Pages</button></Link>
+        </div>
+        <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
           <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
             <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
               <tr>
-                <th scope="col" className="px-6 py-3">Points</th>
-                <th scope="col" className="px-6 py-3">Order Amount</th>
-                <th scope="col" className="px-6 py-3">Action</th>
+                <th scope="col" className="px-6 py-3">Pages</th>
+                <th scope="col" className="px-6 py-3">Image</th>
               </tr>
             </thead>
             <tbody>
@@ -25,10 +23,10 @@ const ConfigPoints = () => {
                     key={index}
                     className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
                   >
-                    <td className="px-6 py-4">{index + 1}</td>
-                    <td className="px-6 py-4">How about an Ice Candy to beat the heat ..!</td>
+                    <td className="px-6 py-4 cursor-pointer hover:underline">Shipping</td>
                     <td className="flex items-center px-6 py-8 space-x-3 text-center">
                       <div className="flex gap-4 items-center ">
+                        <Link to={`/pages/editpages/${index}`}><i className="bx cursor-pointer bx-sm bx-pencil"></i></Link>
                         <i className="bx cursor-pointer bx-sm bx-trash"></i>
                       </div>
                     </td>
@@ -39,8 +37,7 @@ const ConfigPoints = () => {
           </table>
         </div>
     </div>
-    </>
   )
 }
 
-export default ConfigPoints
+export default PagesMenu

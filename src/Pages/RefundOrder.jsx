@@ -146,17 +146,17 @@ const RefundOrder = () => {
 
         <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4'>
 
-        <div  className='space-y-4 cursor-pointer select-none rounded-lg group p-4 ring-1 hover:bg-green-500 duration-500 ring-black/5'>
+        <div  className='space-y-4 cursor-pointer select-none rounded-lg group p-4 ring-1 hover:bg-[#7bff95] duration-500 ring-black/5'>
             <p className='font-semibold text-xsm text-slate-700 group-hover:text-white'>Total Refunds</p>
             <p className='font-semibold text-4xl group-hover:text-white'>44,435</p>
         </div>
         
-        <div className='space-y-4 cursor-pointer select-none rounded-lg group p-4 ring-1 hover:bg-green-500 duration-500 ring-black/5'>
+        <div className='space-y-4 cursor-pointer select-none rounded-lg group p-4 ring-1 hover:bg-[#7bff95] duration-500 ring-black/5'>
             <p className='font-semibold text-xsm text-slate-700 group-hover:text-white'>Refunded</p>
             <p className='font-semibold text-4xl group-hover:text-white'>44,435</p>
         </div>
         
-        <div className='space-y-4 cursor-pointer select-none rounded-lg group p-4 ring-1 hover:bg-green-500 duration-500 ring-black/5'>
+        <div className='space-y-4 cursor-pointer select-none rounded-lg group p-4 ring-1 hover:bg-[#7bff95] duration-500 ring-black/5'>
             <p className='font-semibold text-xsm text-slate-700 group-hover:text-white'>Pending Refunds</p>
             <p className='font-semibold text-4xl group-hover:text-white'>35</p>
         </div>
@@ -173,7 +173,7 @@ const RefundOrder = () => {
                     <input value={dateFrom} onChange={(e)=>setDateFrom(e.target.value)} type="date" className='ring-1 ring-black/5 shadow-lg text-xsm uppercase p-2 rounded-lg' />
                     <input value={dateUpto} onChange={(e)=>setDateUpto(e.target.value)} type="date" className='ring-1 ring-black/5 shadow-lg text-xsm uppercase p-2 rounded-lg' />
                     {/* <button onClick={handleSubmitDateFormat} className='font-semibold text-sm px-6 py-2 bg-green-500 rounded-lg text-white'>Go</button> */}
-                    <button onClick={resetButtonDateFormat} className='bg-green-500 p-2 rounded hover:shadow-lg font-semibold duration-500 text-xsm text-white px-6 py-2'>RESET</button>
+                    <button onClick={resetButtonDateFormat} className='bg-[#7bff95] text-black p-2 rounded hover:shadow-lg font-semibold duration-500 text-xsm  px-6 py-2'>RESET</button>
                 </div>
             </div>
             
@@ -228,7 +228,7 @@ const RefundOrder = () => {
       <td className='font-lighter text-left p-2 text-xsm'>{item.orderStatus}</td>
       <td className='font-lighter text-left p-2 text-xsm'>
       <div className='flex items-center gap-2'>
-        <button className='px-3 py-2 bg-green-500 text-white font-semibold'>View</button>
+        <button className='px-3 py-2 bg-[#7bff95] text-black font-semibold'>View</button>
         </div>  
     </td>
       </tr>

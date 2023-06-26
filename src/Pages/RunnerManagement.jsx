@@ -18,17 +18,16 @@ const RunnerManagement = () => {
       };
 
     const dummyArray = Array(2).fill(1)
-    console.log(selectedRunners)
   return (
     <>
     <div className='p-4 space-y-6'>
 
-    <Link to="/RunnerManagement/AddNewRunner"><button className='px-6 py-3 uppercase bg-green-500 text-xsm font-semibold text-white'>Add New Runner</button></Link>
+    <Link to="/RunnerManagement/AddNewRunner"><button className='px-6 py-3 uppercase bg-[#7bff95] text-xsm font-semibold text-white'>Add New Runner</button></Link>
 
     <div className='p-4 ring-1 ring-black/5 gap-2 flex items-center rounded-lg'>
         <input type="text" className='w-full bg-gray-50 p-3 outline-none focus:outline-none' />
-        <button className='px-6 py-3 uppercase bg-green-500 text-xsm font-semibold text-white'>Go</button>
-        <button className='px-6 py-3 uppercase bg-green-500 text-xsm font-semibold text-white'>Reset</button>
+        <button className='px-6 py-3 uppercase bg-[#7bff95] text-xsm font-semibold text-white'>Go</button>
+        <button className='px-6 py-3 uppercase bg-[#7bff95] text-xsm font-semibold text-white'>Reset</button>
     </div>
 
     <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
@@ -74,7 +73,7 @@ const RunnerManagement = () => {
             </tbody>
           </table>
         </div>
-    <button className={`deleted-runner-btn text-white font-semibold text-xsm bg-green-500 px-6 duratin-1000 py-2 ${selectedRunners.length > 0 ?   'opacity-100' : 'opacity-0'}`}>Delete</button>    
+    <button className={`deleted-runner-btn text-white font-semibold text-xsm bg-[#7bff95] px-6 duratin-1000 py-2 ${selectedRunners.length > 0 ?   'opacity-100' : 'opacity-0'}`}>Delete</button>    
 
     </div>
     {/* <div className={`absolute w-full h-screen  invisible top-0 right-0 bg-black/5 ${seeImage !== '' ? 'visible opacity-100' : 'opacity-0 visible'}`}>

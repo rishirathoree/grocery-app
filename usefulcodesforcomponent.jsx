@@ -96,6 +96,43 @@ const usefulcodesforcomponent = () => {
 
             </div>
           </div>
+
+
+          const [bannerImage,setBannerImage] = useState(null)
+        const handleChangeInputImage = (e) => {
+            const file = e.target.files[0]
+            if(file){
+                const reader = new FileReader
+                reader.onload = () => {
+                    setBannerImage(reader.result)
+                }
+                reader.readAsDataURL(file)
+            }
+        }
+        (bannerImage)
+          {!bannerImage
+          ?
+          (
+          <div className="flex flex-col items-start justify-center w-full">
+          <p className="font-semibold text-xsm">Add Image</p>
+          <label htmlFor="dropzone-file" className="flex flex-col items-center justify-center w-80 h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+          <div className="flex flex-col items-center justify-center pt-5 pb-6">
+            <i className='bx bx-lg bx-image-add'></i>
+            <p className="mb-2 text-sm text-gray-500 dark:text-gray-400"><span className="font-semibold">Click to upload Image</span> or drag and drop</p>
+            <p className="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
+          </div>
+          <input onChange={handleChangeInputImage} id="dropzone-file" type="file" className="hidden" />
+          </label>
+          </div> 
+          )
+          :
+          (
+          <div className='overflow-hidden relative rounded-lg w-80 h-80 shadow-xl'>
+            <i onClick={()=>{setBannerImage(null)}} className='absolute top-2 rounded-full right-2 bg-white cursor-pointer bx bx-trash p-2'></i>
+            <img src={bannerImage} className='w-full h-full object-cover' alt="" />
+          </div> 
+          )
+          }
       </>
   )
 }

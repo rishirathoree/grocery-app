@@ -7,11 +7,11 @@ const BulkImportExport = () => {
         <div>
             <p className='font-semibold text-red-500 mb-4 text-xsm'>Please download store data first before upload the excel file.</p>
         <div className='grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 gap-2'>
-            <button className='px-6 py-2 text-xsm hover:drop-shadow-lg duration-500 font-semibold bg-green-500 text-white'>Upload Product Prices</button>
-            <button className='px-6 py-2 text-xsm hover:drop-shadow-lg duration-500 font-semibold bg-green-500 text-white'>Download Store Inventory</button>
-            <button className='px-6 py-2 text-xsm hover:drop-shadow-lg duration-500 font-semibold bg-green-500 text-white'>Delete All Inventory</button>
-            <button className='px-6 py-2 text-xsm hover:drop-shadow-lg duration-500 font-semibold bg-green-500 text-white'>Sample Inventory Sheet</button>
-            <button className='px-6 py-2 text-xsm hover:drop-shadow-lg duration-500 font-semibold bg-green-500 text-white'>Upload Product Images</button>
+            <button className='px-6 py-2 text-xsm hover:drop-shadow-lg duration-500 font-semibold bg-[#7bff95] text-black'>Upload Product Prices</button>
+            <button className='px-6 py-2 text-xsm hover:drop-shadow-lg duration-500 font-semibold bg-[#7bff95] text-black'>Download Store Inventory</button>
+            <button className='px-6 py-2 text-xsm hover:drop-shadow-lg duration-500 font-semibold bg-[#7bff95] text-black'>Delete All Inventory</button>
+            <button className='px-6 py-2 text-xsm hover:drop-shadow-lg duration-500 font-semibold bg-[#7bff95] text-black'>Sample Inventory Sheet</button>
+            <button className='px-6 py-2 text-xsm hover:drop-shadow-lg duration-500 font-semibold bg-[#7bff95] text-black'>Upload Product Images</button>
         </div>
         </div>
 
@@ -27,7 +27,7 @@ const BulkImportExport = () => {
         </div>
         <input id="dropzone-file" type="file" className="hidden" />
     </label>
-    <button className='px-6 py-2 text-xsm hover:drop-shadow-lg duration-500 font-semibold bg-green-500 text-white'>Submit</button>
+    <button className='px-6 py-2 text-xsm hover:drop-shadow-lg duration-500 font-semibold bg-[#7bff95] text-black'>Submit</button>
 </div> 
 
         </div>

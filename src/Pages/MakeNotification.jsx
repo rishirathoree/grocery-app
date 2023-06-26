@@ -35,8 +35,8 @@ const MakeNotification = () => {
         </label>
         </div>
 
-        <button className='px-6 py-2 bg-green-500 text-white font-semibold text-xsm'>Send</button>
-        <button className='px-6 py-2 bg-green-500 text-white font-semibold text-xsm mx-2'>Clear</button>
+        <button className='px-6 py-2 bg-[#7bff95] text-black font-semibold text-xsm'>Send</button>
+        <button className='px-6 py-2 bg-[#7bff95] text-black font-semibold text-xsm mx-2'>Clear</button>
 
     </div>
   )

@@ -16,13 +16,13 @@ const Coupons = () => {
 
     <div className='flex lg:flex-row md:flex-row sm:flex-col lg:items-center md:items-center sm:items-start gap-2 justify-between'>
         <div className='flex items-center gap-2'>
-        <Link to="/discounts/addEdit"><button className='px-6 py-2 bg-green-500 text-white font-semibold text-xsm'>Add New Coupon</button></Link>
+        <Link to="/discounts/addEdit"><button className='px-6 py-2 bg-[#7bff95] text-black font-semibold text-xsm'>Add New Coupon</button></Link>
         <Select className='w-max duration-500' options={paginationItemPerPage} />
         </div>
         <div className='flex items-center gap-2'>
         <input type="text" className='p-2 bg-gray-50 focus:outline-none text-xsm font-semibold outline-none focus:shadow-sm duration-500' />
-        <button className='px-6 py-2 bg-green-500 text-white font-semibold text-xsm'>GO</button>
-        <button className='px-6 py-2 bg-green-500 text-white font-semibold text-xsm'>Reset</button>
+        <button className='px-6 py-2 bg-[#7bff95] text-black font-semibold text-xsm'>GO</button>
+        <button className='px-6 py-2 bg-[#7bff95] text-black font-semibold text-xsm'>Reset</button>
         </div>
     </div>
 

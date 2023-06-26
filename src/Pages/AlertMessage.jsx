@@ -15,13 +15,13 @@ const AlertMessage = () => {
 
     <div className='flex items-center lg:flex-row md:flex-row sm:flex-col sm:items-start justify-between gap-2 rounded-lg ring-1 p-4 ring-black/5'>
         <div className='flex gap-2 items-center '>
-            <Link to="/alert_messages/push-notification"><button className='px-6 py-2 w-max font-semibold text-xsm text-white bg-green-500'>Push Notification</button></Link>
+            <Link to="/alert_messages/push-notification"><button className='px-6 py-2 w-max font-semibold text-xsm bg-[#7bff95] text-black'>Push Notification</button></Link>
             <div><Select className='w-full' options={paginationPerPageSelectOption} /></div>
         </div>
         <div className='flex gap-2'>
             <input type="text" className='focus:outline-none outline-none ring-1 font-semibold text-xsm ring-black/5 p-2' />
-            <button className='px-6 py-2 w-max font-semibold text-xsm text-white bg-green-500'>Go</button>
-            <button className='px-6 py-2 w-max font-semibold text-xsm text-white bg-green-500'>Reset</button>
+            <button className='px-6 py-2 w-max font-semibold text-xsm bg-[#7bff95] text-black'>Go</button>
+            <button className='px-6 py-2 w-max font-semibold text-xsm bg-[#7bff95] text-black'>Reset</button>
         </div>
     </div>
 

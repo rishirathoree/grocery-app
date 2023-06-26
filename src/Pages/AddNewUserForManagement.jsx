@@ -47,7 +47,6 @@ const AddNewUserForManagement = () => {
         }
       };
       
-      console.log(roleSelectedForUser);
     // const assignRole = (selectedRole) => {setRoleSelectedForUser([...roleSelectedForUser,selectedRole])}
     const assignAdminRolePermission = (selectedRole) => {setSelectedAppPermissionForUser([...SelectedAppPermissionForUser,selectedRole])}
   return (
@@ -80,7 +79,7 @@ const AddNewUserForManagement = () => {
         <div className='roles-available grid lg:grid-cols-4 md:grid-cols-2 gap-2 sm:grid-cols-2'>
             {roleAvailable.map((item,index)=>{
                 return(
-                    <div onClick={()=>{assignRole(item)}} className={`p-8 ring-black/5 rounded-lg shadow-lg ring-1 ${roleSelectedForUser && roleSelectedForUser.includes(item) ? 'text-white bg-green-500' : ''}`} key={index}>
+                    <div onClick={()=>{assignRole(item)}} className={`p-8 ring-black/5 rounded-lg shadow-lg ring-1 ${roleSelectedForUser && roleSelectedForUser.includes(item) ? 'text-slate-600 bg-[#7bff95]' : ''}`} key={index}>
                         <p className='font-semibold text-xsm'>{item}</p>
                     </div>
                 )
@@ -93,7 +92,7 @@ const AddNewUserForManagement = () => {
         <div className='roles-available grid lg:grid-cols-4 md:grid-cols-2 gap-2 sm:grid-cols-2'>
             {adminAppPermissions.map((item,index)=>{
                 return(
-                    <div onClick={()=>{assignAdminRolePermission(item)}} className={`p-8 ring-black/5 rounded-lg shadow-lg ring-1 ${SelectedAppPermissionForUser && SelectedAppPermissionForUser.includes(item) ? 'text-white bg-green-500' : ''}`} key={index}>
+                    <div onClick={()=>{assignAdminRolePermission(item)}} className={`p-8 ring-black/5 rounded-lg shadow-lg ring-1 ${SelectedAppPermissionForUser && SelectedAppPermissionForUser.includes(item) ? 'text-white bg-[#7bff95]' : ''}`} key={index}>
                         <p className='font-semibold text-xsm'>{item}</p>
                     </div>
                 )
@@ -102,8 +101,8 @@ const AddNewUserForManagement = () => {
         </div>
         
         <div className='pt-4 border-t flex items-end justify-end gap-2'>
-            <button className='px-6 py-2 bg-green-500 hover:bg-green-600 text-white font-semibold text-xsm'>Save</button>
-            <button className='px-6 py-2 bg-green-500 hover:bg-green-600 text-white font-semibold text-xsm'>Cancel</button>
+            <button className='px-6 py-2 bg-[#7bff95] hover:bg-green-600 text-white font-semibold text-xsm'>Save</button>
+            <button className='px-6 py-2 bg-[#7bff95] hover:bg-green-600 text-white font-semibold text-xsm'>Cancel</button>
         </div>
 
     </div>

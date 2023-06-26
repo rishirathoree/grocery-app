@@ -10,8 +10,8 @@ const SoldItemReport = () => {
 
     <div className='flex items-center lg:flex-row md:flex-row sm:flex-col sm:items-start justify-between gap-2 rounded-lg'>
         <div className='flex gap-2 items-center w-full'>
-      <button className='px-6 w-full py-3 font-semibold text-xsm text-white bg-green-500'>Export Data</button>
-      <button className='px-6 w-full py-3 font-semibold text-xsm text-white bg-green-500'>Top Products</button>
+      <button className='px-6 w-full py-3 font-semibold text-xsm bg-[#7bff95] text-black'>Export Data</button>
+      <button className='px-6 w-full py-3 font-semibold text-xsm bg-[#7bff95] text-black'>Top Products</button>
         </div>
     </div>
     
@@ -20,8 +20,8 @@ const SoldItemReport = () => {
           <input type="text" className='w-full p-2 bg-gray-100 ring-2 ring-black/5 font-semibold text-sm  focus:outline-none outline-none' />
           <input type="date" className='w-full p-2 bg-gray-100 ring-2 ring-black/5 font-semibold uppercase text-xsm  focus:outline-none outline-none' />
           <input type="date" className='w-full p-2 bg-gray-100 ring-2 ring-black/5 font-semibold uppercase text-xsm  focus:outline-none outline-none' />
-          <button className='px-6 w-full py-2 font-semibold text-md hover:bg-green-600 duration-500 text-white bg-green-500'>Go</button>
-          <button className='px-6 w-full py-2 font-semibold text-md hover:bg-green-600 duration-500 text-white bg-green-500'>Reset</button>
+          <button className='px-6 w-full py-2 font-semibold text-md hover:bg-[#6adc80] duration-500 bg-[#7bff95] text-black'>Go</button>
+          <button className='px-6 w-full py-2 font-semibold text-md hover:bg-[#6adc80] duration-500 bg-[#7bff95] text-black'>Reset</button>
         </div>
     </div>
 

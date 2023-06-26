@@ -30,7 +30,18 @@ import UserManagement from './UserManagement'
 import AddNewUserForManagement from './AddNewUserForManagement'
 import RunnerManagement from './RunnerManagement'
 import AddRunners from './AddRunners'
-
+import Enquires from './Enquires'
+import Banner from './Banner'
+import AddBanner from './AddBanner'
+import PagesMenu from './PagesMenu'
+import AddPages from './AddPages'
+import Editpages from './EditPages'
+import AddFaq from './AddFaq'
+import Faq from './Faq'
+import StoreInformation from './StoreInformation'
+import FeaturesSetting from './FeaturesSetting'
+import OnlinePaymentStore from './OnlinePaymentStore'
+import SocialMediaManagement from './SocialMediaManagement'
 
 const Home = () => {
     return (
@@ -56,7 +67,6 @@ const Home = () => {
                 <Route path="/discounts/addEdit" element={<AddNewCoupon />} />
                 <Route path="/ReferAndEarn" element={<ReferEarn />} />
                 <Route path="/alert_messages" element={<AlertMessage />} />
-                <Route path="/alert_messages" element={<AlertMessage />} />
                 <Route path="/alert_messages/push-notification" element={<MakeNotification />} />
                 <Route path="/SoldItemReport" element={<SoldItemReport />} />
                 <Route path="/DailyOrder" element={<DailyOrder />} />
@@ -68,6 +78,19 @@ const Home = () => {
                 <Route path="/User-Management/Add-New-Role" element={<AddNewUserForManagement />} />
                 <Route path="/RunnerManagement" element={<RunnerManagement />} />
                 <Route path="/RunnerManagement/AddNewRunner" element={<AddRunners />} />
+                <Route path="/Enquires" element={<Enquires />} />
+                <Route path="/Banners" element={<Banner />} />
+                <Route path="/Banners/AddBanner" element={<AddBanner />} />
+                <Route path="/Pages" element={<PagesMenu />} />
+                <Route path="/Pages/addpages" element={<AddPages />} />
+                <Route path="/Pages/editpages/:id" element={<Editpages />} />
+                <Route path="/Faq" element={<Faq />} />
+                <Route path="/Faq/addFaq" element={<AddFaq />} />
+                <Route path="/StoreInformation" element={<StoreInformation />} />
+                <Route path="/FeaturesSetting" element={<FeaturesSetting />} />
+                <Route path="/payment_settings" element={<OnlinePaymentStore />} />
+                <Route path="/Social_linkings" element={<SocialMediaManagement />} />
+                
             </Routes>
         </div>
     </>

@@ -111,9 +111,9 @@ const Users = () => {
     <>
     <div className='p-4 space-y-6'>
         <div className='flex gap-2'>
-            <button onClick={()=>{setAddNewUser(!addNewUser)}} className='px-6 py-2 bg-green-500 font-semibold text-xsm text-white'>Add New User</button>
-            <button className='px-6 py-2 bg-green-500 font-semibold text-xsm text-white'>Import User Data</button>
-            <button className='px-6 py-2 bg-green-500 font-semibold text-xsm text-white'>Import file</button>
+            <button onClick={()=>{setAddNewUser(!addNewUser)}} className='px-6 py-2 bg-[#7bff95] font-semibold text-xsm text-black'>Add New User</button>
+            <button className='px-6 py-2 bg-[#7bff95] font-semibold text-xsm text-black'>Import User Data</button>
+            <button className='px-6 py-2 bg-[#7bff95] font-semibold text-xsm text-black'>Import file</button>
         </div>
     <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
           <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
