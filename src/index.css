@@ -66,3 +66,8 @@ body{font-family: 'Inter', sans-serif;}
   height: 400px;
 }
 
+.shadowCustom{
+  -webkit-box-shadow: 0px 0px 36px 13px rgba(219,219,219,0.479);
+  -moz-box-shadow: 0px 0px 36px 13px rgba(219, 219, 219, 0.479);
+  box-shadow: 0px 0px 36px 13px rgba(219,219,219,0.479);
+}

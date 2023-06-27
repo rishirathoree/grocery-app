@@ -184,26 +184,26 @@ const Aside = () => {
           icon: 'bx bx-building-house',
           url: '/payment_settings',
         },
-        // {
-        //   title: 'Tax Setting',
-        //   icon: 'bx bxs-zap',
-        //   url: '/pages',
-        // },
-        // {
-        //   title: 'Store Time Information',
-        //   icon: 'bx bx-building-house',
-        //   url: '/Banners',
-        // },
-        // {
-        //   title: 'Delivery Slot Setting',
-        //   icon: 'bx bxs-zap',
-        //   url: '/pages',
-        // },
-        // {
-        //   title: 'Delivery Areas',
-        //   icon: 'bx bxs-zap',
-        //   url: '/pages',
-        // },
+        {
+          title: 'Tax Setting',
+          icon: 'bx bxs-zap',
+          url: '/Tax-Setting',
+        },
+        {
+          title: 'Store Time Information',
+          icon: 'bx bx-building-house',
+          url: '/Store-time-management',
+        },
+        {
+          title: 'Delivery Slot Setting',
+          icon: 'bx bxs-zap',
+          url: '/Delivery-Slot-Setting',
+        },
+        {
+          title: 'Delivery Areas',
+          icon: 'bx bxs-zap',
+          url: '/Delivery-Areas',
+        },
         {
           title: 'Social Media Management',
           icon: 'bx bxs-zap',

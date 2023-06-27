@@ -42,6 +42,14 @@ import StoreInformation from './StoreInformation'
 import FeaturesSetting from './FeaturesSetting'
 import OnlinePaymentStore from './OnlinePaymentStore'
 import SocialMediaManagement from './SocialMediaManagement'
+import TaxSetting from './TaxSetting'
+import StoreTimeManagement from './StoreTimeManagement'
+import DeliverySlotSetting from './DeliverySlotSetting'
+import DeliveryAreas from './DeliveryAreas'
+import AddDeliveryAreas from './AddDeliveryAreas'
+import AddPickupAddress from './AddPickupAddress'
+import ManageCities from './ManageCities'
+import AddCities from './AddCities'
 
 const Home = () => {
     return (
@@ -90,6 +98,14 @@ const Home = () => {
                 <Route path="/FeaturesSetting" element={<FeaturesSetting />} />
                 <Route path="/payment_settings" element={<OnlinePaymentStore />} />
                 <Route path="/Social_linkings" element={<SocialMediaManagement />} />
+                <Route path="/Tax-Setting" element={<TaxSetting />} />
+                <Route path="/Store-time-management" element={<StoreTimeManagement />} />
+                <Route path="/Delivery-Slot-Setting" element={<DeliverySlotSetting />} />
+                <Route path="/Delivery-Areas" element={<DeliveryAreas />} />
+                <Route path="/Delivery-Areas/AddDeliveryAreas" element={<AddDeliveryAreas />} />
+                <Route path="/Delivery-Areas/AddPickupAddress" element={<AddPickupAddress />} />
+                <Route path="/Delivery-Areas/ManageCities" element={<ManageCities />} />
+                <Route path="/Delivery-Areas/ManageCities/AddCities" element={<AddCities />} />
                 
             </Routes>
         </div>
